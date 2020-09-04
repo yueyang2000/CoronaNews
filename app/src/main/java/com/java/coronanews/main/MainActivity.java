@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SearchView;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,9 +19,9 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.java.coronanews.R;
 import com.java.coronanews.about.AboutFragment;
-import com.java.coronanews.news.NewsFragment;
-import com.java.coronanews.favorites.FavoritesFragment;
-import com.java.coronanews.settings.SettingsFragment;
+//import com.java.coronanews.news.NewsFragment;
+//import com.java.coronanews.favorites.FavoritesFragment;
+//import com.java.coronanews.settings.SettingsFragment;
 
 /**
  * Created by equation on 9/7/17.
@@ -44,21 +44,6 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = new MainPresenter(this, getIntent().getBooleanExtra(RESTART_BY_MODE, false));
-
-        if (mPresenter.isNightMode()) {
-            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-        mPresenter.setConfigNightModeChangeListener(() -> { // 白天/夜晚主题切换
-            new Handler().postDelayed(() -> {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                intent.putExtra(RESTART_BY_MODE, true);
-                MainActivity.this.startActivity(intent);
-                overridePendingTransition(R.anim.in_anim, R.anim.out_anim);
-                MainActivity.this.finish();
-            }, 300);
-        });
 
         setContentView(R.layout.activity_main);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -104,7 +89,7 @@ public class MainActivity extends AppCompatActivity
         mSearchView.setOnCloseListener(() -> {
             if (!mKeyword.isEmpty()) {
                 mKeyword = "";
-                ((NewsFragment) mNews).setKeyword("");
+//                ((NewsFragment) mNews).setKeyword("");
             }
             return false;
         });
@@ -112,11 +97,11 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public boolean onQueryTextSubmit(String query) {
-                mKeyword = query;
-                System.out.println(mPresenter.getCurrentNavigation() + "  " + R.id.nav_news);
-                if (mPresenter.getCurrentNavigation() == R.id.nav_news && mNews != null)
-                    ((NewsFragment) mNews).setKeyword(query);
-                mSearchView.clearFocus();
+//                mKeyword = query;
+//                System.out.println(mPresenter.getCurrentNavigation() + "  " + R.id.nav_news);
+//                if (mPresenter.getCurrentNavigation() == R.id.nav_news && mNews != null)
+//                    ((NewsFragment) mNews).setKeyword(query);
+//                mSearchView.clearFocus();
                 return false;
             }
 
@@ -173,26 +158,26 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void switchToNews() {
-        switchTo(R.id.nav_news, "新闻");
-        if (mNews == null)
-            mNews = NewsFragment.newInstance();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mNews).commit();
+//        switchTo(R.id.nav_news, "新闻");
+//        if (mNews == null)
+//            mNews = NewsFragment.newInstance();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mNews).commit();
     }
 
     @Override
     public void switchToFavorites() {
-        switchTo(R.id.nav_favorites, "收藏");
-        if (mFavorites == null)
-            mFavorites = FavoritesFragment.newInstance();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mFavorites).commit();
+//        switchTo(R.id.nav_favorites, "收藏");
+//        if (mFavorites == null)
+//            mFavorites = FavoritesFragment.newInstance();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mFavorites).commit();
     }
 
     @Override
     public void switchToSettings() {
-        switchTo(R.id.nav_settings, "设置");
-        if (mSettings == null)
-            mSettings = SettingsFragment.newInstance();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mSettings).commit();
+//        switchTo(R.id.nav_settings, "设置");
+//        if (mSettings == null)
+//            mSettings = SettingsFragment.newInstance();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mSettings).commit();
     }
 
     @Override

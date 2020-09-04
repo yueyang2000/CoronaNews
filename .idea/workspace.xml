@@ -7,36 +7,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a127711-9eb3-4008-8671-b7bd880009f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/loading/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/CoronaNews.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/CoronaNews.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/about/AboutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/about/AboutFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/AC_AutoMaton.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/AC_AutoMaton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/ImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/ImageLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/Speech.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/Speech.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/loading/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/loading/SplashActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/NewsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/NewsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/ChipsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/ChipsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/BasePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/BasePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/BaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/BaseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/about/AboutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/about/AboutFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/AC_AutoMaton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/API.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/AhoCorasick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/Constant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/DetailNews.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/FS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/ImageLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/ImageSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/RecSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/SimpleNews.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/data/Speech.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/favorites/FavoritesPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/loading/SplashActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/main/wxapi/WXEntryActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/NewsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newsdetail/NewsDetailPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/news/newslist/NewsListPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/ChipsAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/coronanews/settings/SettingsPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_wxentry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_wxentry.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_tag.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +101,18 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Properties" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.java.coronanews" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -83,7 +122,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -149,10 +188,18 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1499" y="-269" key="#PSD" timestamp="1599186168774">
+      <screen x="-2048" y="-572" width="2048" height="1129" />
+    </state>
+    <state x="-1499" y="-269" key="#PSD/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599186168774" />
     <state x="-1560" y="-346" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599113093212">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state x="-1560" y="-346" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599113093212" />
+    <state x="-1261" y="-129" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1599191502195">
+      <screen x="-2048" y="-572" width="2048" height="1129" />
+    </state>
+    <state x="-1261" y="-129" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599191502195" />
     <state x="-1354" y="-175" key="com.intellij.ide.util.TipDialog" timestamp="1599184786965">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>

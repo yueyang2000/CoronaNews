@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">39_秦岳</string>
+    <string name="app_name">CoronaNews</string>
     <string name="title_activity_news_detail">NewsDetailActivity</string>
     <string name="title_activity_wxentry">WXEntryActivit</string>
 

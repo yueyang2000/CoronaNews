@@ -2,7 +2,7 @@ package com.java.coronanews.main;
 
 import com.java.coronanews.BaseView;
 import com.java.coronanews.BasePresenter;
-import com.java.coronanews.data.Config;
+//import com.java.coronanews.data.Config;
 
 /**
  * Created by equation on 9/7/17.
@@ -34,14 +34,6 @@ public interface MainContract {
     }
 
     interface Presenter extends BasePresenter {
-
-        /**
-         * 是否夜间模式
-         * @return
-         */
-        boolean isNightMode();
-
-        void setConfigNightModeChangeListener(Config.NightModeChangeListener listener);
 
         /**
          * 切换页面

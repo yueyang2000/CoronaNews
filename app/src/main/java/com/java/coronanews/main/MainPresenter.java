@@ -1,8 +1,8 @@
 package com.java.coronanews.main;
 
 import com.java.coronanews.R;
-import com.java.coronanews.data.Config;
-import com.java.coronanews.data.Manager;
+//import com.java.coronanews.data.Config;
+//import com.java.coronanews.data.Manager;
 
 /**
  * Created by equation on 9/7/17.
@@ -39,15 +39,6 @@ public class MainPresenter implements MainContract.Presenter {
     public void unsubscribe() {
     }
 
-    @Override
-    public boolean isNightMode() {
-        return Manager.I.getConfig().isNightMode();
-    }
-
-    @Override
-    public void setConfigNightModeChangeListener(Config.NightModeChangeListener listener) {
-        Manager.I.getConfig().setNightModeChangeListener(listener);
-    }
 
     @Override
     public void switchNavigation(int id) {
