@@ -72,11 +72,11 @@ public class NewsFragment extends Fragment {
         mViewPager.setOffscreenPageLimit(3);
 
         mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-        for (int i = 0; i < mCategories.size(); i++)
-            mTabLayout.addTab(mTabLayout.newTab());
-
-        mViewPager.setAdapter(mPagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
+        for (int i = 0; i < mCategories.size(); i++)
+            mTabLayout.addTab(mTabLayout.newTab().setText(mCategories.get(i)));
+        mViewPager.setAdapter(mPagerAdapter);
+
 
         return view;
     }

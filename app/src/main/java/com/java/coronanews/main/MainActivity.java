@@ -2,8 +2,11 @@ package com.java.coronanews.main;
 
 import android.content.Intent;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SearchView;
 import com.google.android.material.navigation.NavigationView;
@@ -19,7 +22,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.java.coronanews.R;
 import com.java.coronanews.about.AboutFragment;
-//import com.java.coronanews.news.NewsFragment;
+import com.java.coronanews.news.NewsFragment;
 //import com.java.coronanews.favorites.FavoritesFragment;
 //import com.java.coronanews.settings.SettingsFragment;
 
@@ -139,6 +142,7 @@ public class MainActivity extends AppCompatActivity
         return this;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void start(Intent intent, Bundle options) {
         startActivity(intent, options);
@@ -158,10 +162,10 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void switchToNews() {
-//        switchTo(R.id.nav_news, "新闻");
-//        if (mNews == null)
-//            mNews = NewsFragment.newInstance();
-//        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mNews).commit();
+        switchTo(R.id.nav_news, "新闻");
+        if (mNews == null)
+            mNews = NewsFragment.newInstance();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mNews).commit();
     }
 
     @Override
