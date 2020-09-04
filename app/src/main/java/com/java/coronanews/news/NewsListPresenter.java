@@ -1,10 +1,12 @@
 package com.java.coronanews.news;
 
 import android.os.Bundle;
-
+import java.util.*;
 import com.java.coronanews.data.NewsItem;
-// import com.java.coronanews.news.newsdetail.NewsDetailActivity;
 
+import io.reactivex.Single;
+import io.reactivex.functions.Consumer;
+// import com.java.coronanews.news.newsdetail.NewsDetailActivity;
 
 /**
  * Created by chenyu on 2017/9/7.
@@ -84,6 +86,12 @@ public class NewsListPresenter implements NewsListContract.Presenter {
     }
 
     private void fetchNews() {
+        ArrayList<NewsItem> arr = new ArrayList<>();
+        arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem());
+        System.out.println(mView);
+        //mView.setNewsList(arr);
+
+
 //        final long start = System.currentTimeMillis();
 //        mLoading = true;
 //        mLastFetchStart = start;
@@ -127,5 +135,6 @@ public class NewsListPresenter implements NewsListContract.Presenter {
 //                }
 //            }
 //        });
+
     }
 }
