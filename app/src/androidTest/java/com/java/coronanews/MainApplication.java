@@ -3,8 +3,8 @@ package com.java.coronanews;
 import android.app.Application;
 import android.util.Log;
 
-import com.java.g39.data.ImageLoader;
-import com.java.g39.data.Manager;
+import com.java.coronanews.data.ImageLoader;
+import com.java.coronanews.data.Manager;
 
 /**
  * Created by equation on 9/11/17.

@@ -3,9 +3,9 @@ package com.java.coronanews.settings;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.java.g39.data.Config;
-import com.java.g39.data.ImageLoader;
-import com.java.g39.data.Manager;
+import com.java.coronanews.data.Config;
+import com.java.coronanews.data.ImageLoader;
+import com.java.coronanews.data.Manager;
 
 import java.util.List;
 

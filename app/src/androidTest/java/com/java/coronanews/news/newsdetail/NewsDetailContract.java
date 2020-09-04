@@ -2,9 +2,9 @@ package com.java.coronanews.news.newsdetail;
 
 import android.app.Activity;
 
-import com.java.g39.BasePresenter;
-import com.java.g39.BaseView;
-import com.java.g39.data.DetailNews;
+import com.java.coronanews.BasePresenter;
+import com.java.coronanews.BaseView;
+import com.java.coronanews.data.DetailNews;
 
 /**
  * Created by chenyu on 2017/9/7.

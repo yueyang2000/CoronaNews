@@ -3,9 +3,9 @@ package com.java.coronanews.favorites;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.java.g39.data.Manager;
-import com.java.g39.data.SimpleNews;
-import com.java.g39.news.newsdetail.NewsDetailActivity;
+import com.java.coronanews.data.Manager;
+import com.java.coronanews.data.SimpleNews;
+import com.java.coronanews.news.newsdetail.NewsDetailActivity;
 
 import java.util.List;
 

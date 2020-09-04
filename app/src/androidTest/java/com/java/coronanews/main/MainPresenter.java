@@ -1,8 +1,8 @@
 package com.java.coronanews.main;
 
-import com.java.g39.R;
-import com.java.g39.data.Config;
-import com.java.g39.data.Manager;
+import com.java.coronanews.R;
+import com.java.coronanews.data.Config;
+import com.java.coronanews.data.Manager;
 
 /**
  * Created by equation on 9/7/17.

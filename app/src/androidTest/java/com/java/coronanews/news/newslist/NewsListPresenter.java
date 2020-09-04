@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.java.g39.data.DetailNews;
-import com.java.g39.data.Manager;
-import com.java.g39.data.SimpleNews;
-import com.java.g39.news.newsdetail.NewsDetailActivity;
+import com.java.coronanews.data.DetailNews;
+import com.java.coronanews.data.Manager;
+import com.java.coronanews.data.SimpleNews;
+import com.java.coronanews.news.newsdetail.NewsDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -4,18 +4,18 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.java.g39.R;
-import com.java.g39.data.SimpleNews;
-import com.java.g39.news.newslist.NewsAdapter;
+import com.java.coronanews.R;
+import com.java.coronanews.data.SimpleNews;
+import com.java.coronanews.news.newslist.NewsAdapter;
 
 import java.util.List;
 

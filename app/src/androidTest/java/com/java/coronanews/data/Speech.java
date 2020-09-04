@@ -1,5 +1,7 @@
 package com.java.coronanews.data;
 
+
+
 import com.iflytek.cloud.InitListener;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechError;

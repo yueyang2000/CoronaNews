@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.java.g39.R;
-import com.java.g39.data.SimpleNews;
-import com.java.g39.data.ImageLoader;
+import com.java.coronanews.R;
+import com.java.coronanews.data.SimpleNews;
+import com.java.coronanews.data.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;

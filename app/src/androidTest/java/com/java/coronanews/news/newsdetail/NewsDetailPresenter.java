@@ -2,10 +2,10 @@ package com.java.coronanews.news.newsdetail;
 
 import android.app.Activity;
 
-import com.java.g39.data.DetailNews;
-import com.java.g39.data.Manager;
+import com.java.coronanews.data.DetailNews;
+import com.java.coronanews.data.Manager;
 
-import io.reactivex.functions.Consumer;
+import androidx.core.util.Consumer;
 
 /**
  * Created by chenyu on 2017/9/7.

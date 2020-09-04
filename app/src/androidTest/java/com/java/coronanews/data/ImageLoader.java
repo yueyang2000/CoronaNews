@@ -3,7 +3,7 @@ package com.java.coronanews.data;
 import android.content.Context;
 import android.widget.ImageView;
 
-import com.java.g39.R;
+import com.java.coronanews.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 

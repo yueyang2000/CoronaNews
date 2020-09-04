@@ -2,9 +2,9 @@ package com.java.coronanews.favorites;
 
 import android.os.Bundle;
 
-import com.java.g39.BasePresenter;
-import com.java.g39.BaseView;
-import com.java.g39.data.SimpleNews;
+import com.java.coronanews.BasePresenter;
+import com.java.coronanews.BaseView;
+import com.java.coronanews.data.SimpleNews;
 
 import java.util.List;
 

@@ -8,11 +8,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
-import com.java.g39.BuildConfig;
-import com.java.g39.R;
-
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
+
 
 import java.io.IOException;
 import java.net.MalformedURLException;

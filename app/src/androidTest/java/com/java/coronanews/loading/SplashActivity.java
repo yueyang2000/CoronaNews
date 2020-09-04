@@ -1,13 +1,13 @@
 package com.java.coronanews.loading;
 
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.java.g39.R;
-import com.java.g39.data.Manager;
-import com.java.g39.main.MainActivity;
+import com.java.coronanews.R;
+import com.java.coronanews.data.Manager;
+import com.java.coronanews.main.MainActivity;
 
 import io.reactivex.functions.Consumer;
 

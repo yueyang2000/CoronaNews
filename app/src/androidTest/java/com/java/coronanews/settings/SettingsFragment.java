@@ -4,10 +4,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,10 +19,10 @@ import android.widget.Toast;
 
 import com.beloo.widget.chipslayoutmanager.ChipsLayoutManager;
 
-import com.java.g39.R;
-import com.java.g39.data.Config;
-import com.java.g39.data.Constant;
-import com.java.g39.data.Manager;
+import com.java.coronanews.R;
+import com.java.coronanews.data.Config;
+import com.java.coronanews.data.Constant;
+import com.java.coronanews.data.Manager;
 
 import java.util.List;
 

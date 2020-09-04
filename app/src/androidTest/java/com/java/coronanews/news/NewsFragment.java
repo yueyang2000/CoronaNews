@@ -1,20 +1,20 @@
 package com.java.coronanews.news;
 
 import android.os.Parcelable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import com.google.android.material.tabs.TabLayout;
+import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.java.g39.R;
-import com.java.g39.data.Config;
-import com.java.g39.data.Manager;
-import com.java.g39.news.newslist.NewsListFragment;
+import com.java.coronanews.R;
+import com.java.coronanews.data.Config;
+import com.java.coronanews.data.Manager;
+import com.java.coronanews.news.newslist.NewsListFragment;
 
 import java.util.ArrayList;
 import java.util.List;

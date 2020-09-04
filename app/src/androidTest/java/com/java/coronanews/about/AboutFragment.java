@@ -1,15 +1,17 @@
 package com.java.coronanews.about;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
+
+import androidx.appcompat.app.AlertDialog;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.java.g39.R;
+import androidx.fragment.app.Fragment;
+
+import com.java.coronanews.R;
 
 /**
  * Created by 岳 on 2017/9/12.
