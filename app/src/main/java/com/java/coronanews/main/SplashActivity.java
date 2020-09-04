@@ -1,4 +1,4 @@
-package com.java.coronanews.loading;
+package com.java.coronanews.main;
 
 import android.content.Intent;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 import com.java.coronanews.R;
 //import com.java.coronanews.data.Manager;
-import com.java.coronanews.main.MainActivity;
+
 
 //import io.reactivex.functions.Consumer;
 

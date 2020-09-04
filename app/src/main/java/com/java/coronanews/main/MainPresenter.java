@@ -4,9 +4,6 @@ import com.java.coronanews.R;
 //import com.java.coronanews.data.Config;
 //import com.java.coronanews.data.Manager;
 
-/**
- * Created by equation on 9/7/17.
- */
 
 public class MainPresenter implements MainContract.Presenter {
 
