@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.xyzlf.share:sharesdk:0.0.11@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffbd8808b043c4180c5ffbecc3f23810/jetified-sharesdk-0.0.11/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffbd8808b043c4180c5ffbecc3f23810/jetified-sharesdk-0.0.11/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffbd8808b043c4180c5ffbecc3f23810/jetified-sharesdk-0.0.11/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffbd8808b043c4180c5ffbecc3f23810/jetified-sharesdk-0.0.11/jars/libs/libammsdk-2.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffbd8808b043c4180c5ffbecc3f23810/jetified-sharesdk-0.0.11/jars/libs/open_sdk_r5756_lite.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xyzlf.share/sharesdk/0.0.11/745854f85e738bac37e15023c85366b84fa4f52d/sharesdk-0.0.11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xyzlf.share/sharesdk/0.0.11/e61afab9d06f5f104932e99c925016ad86a43788/sharesdk-0.0.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

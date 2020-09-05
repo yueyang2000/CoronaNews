@@ -2,8 +2,9 @@ package com.java.coronanews.news;
 
 import android.os.Bundle;
 import java.util.*;
-import com.java.coronanews.data.NewsItem;
 
+import com.java.coronanews.data.Manager;
+import com.java.coronanews.data.NewsItem;
 import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
 // import com.java.coronanews.news.newsdetail.NewsDetailActivity;
@@ -86,55 +87,50 @@ public class NewsListPresenter implements NewsListContract.Presenter {
     }
 
     private void fetchNews() {
-        ArrayList<NewsItem> arr = new ArrayList<>();
-        arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem());
-        System.out.println(mView);
-        //mView.setNewsList(arr);
+//        ArrayList<NewsItem> arr = new ArrayList<>();
+//        arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem());
+//        System.out.println(mView);
+//        mView.setNewsList(arr);
 
 
-//        final long start = System.currentTimeMillis();
-//        mLoading = true;
-//        mLastFetchStart = start;
-//        Single<List<NewsItem>> single = null;
-//        if (mKeyword.trim().length() > 0) {
-//            single = Manager.I.searchNews(mKeyword, mPageNo, PAGE_SIZE, mCategory);
-//        } else if (mCategory > 0) {
-//            single = Manager.I.fetchSimpleNews(mPageNo, PAGE_SIZE, mCategory);
-//        } else {
-//            single = Manager.I.recommend();
-//        }
-//
-//        single.subscribe(new Consumer<List<NewsItem>>() {
-//            @Override
-//            public void accept(List<NewsItem> simpleNewses) throws Exception {
-//                System.out.println(System.currentTimeMillis() - start + " | " + mCategory + " | " + simpleNewses.size() + " | " + mPageNo);
-//                if (start != mLastFetchStart) return;
-//
-//                mLoading = false;
-//                if (mKeyword.trim().length() != 0 || mCategory > 0) {
-//                    mView.onSuccess(simpleNewses.size() == 0);
-//                    if (simpleNewses.size() == 1 && simpleNewses.get(0) == NewsItem.NULL) {
-//                        simpleNewses.clear();
-//                        requireMoreNews();
-//                    }
-//
-//                    // TODO onError
-//                    if (mPageNo == 1) mView.setNewsList(simpleNewses);
-//                    else mView.appendNewsList(simpleNewses);
-//
-//                    if (mPageNo == 1 && simpleNewses.size() > 0 && simpleNewses.size() < 10)
-//                        requireMoreNews();
-//                } else {
-//                    if (mPageNo > 1 || simpleNewses.size() == 0) {
-//                        mView.onSuccess(true);
-//                        mView.appendNewsList(new ArrayList<>());
-//                    } else {
-//                        mView.onSuccess(false);
-//                        mView.setNewsList(simpleNewses);
-//                    }
-//                }
-//            }
-//        });
+        final long start = System.currentTimeMillis();
+        mLoading = true;
+        mLastFetchStart = start;
+        Single<List<NewsItem>> single = null;
+
+        single = Manager.I.fetchSimpleNews(mPageNo, PAGE_SIZE, mCategory);
+
+        single.subscribe(new Consumer<List<NewsItem>>() {
+            @Override
+            public void accept(List<NewsItem> simpleNewses) throws Exception {
+                System.out.println(System.currentTimeMillis() - start + " | " + mCategory + " | " + simpleNewses.size() + " | " + mPageNo);
+                if (start != mLastFetchStart) return;
+
+                mLoading = false;
+                if (mKeyword.trim().length() != 0 || mCategory > 0) {
+                    mView.onSuccess(simpleNewses.size() == 0);
+                    if (simpleNewses.size() == 1 && simpleNewses.get(0) == NewsItem.NULL) {
+                        simpleNewses.clear();
+                        requireMoreNews();
+                    }
+
+                    // TODO onError
+                    if (mPageNo == 1) mView.setNewsList(simpleNewses);
+                    else mView.appendNewsList(simpleNewses);
+
+                    if (mPageNo == 1 && simpleNewses.size() > 0 && simpleNewses.size() < 10)
+                        requireMoreNews();
+                } else {
+                    if (mPageNo > 1 || simpleNewses.size() == 0) {
+                        mView.onSuccess(true);
+                        mView.appendNewsList(new ArrayList<>());
+                    } else {
+                        mView.onSuccess(false);
+                        mView.setNewsList(simpleNewses);
+                    }
+                }
+            }
+        });
 
     }
 }

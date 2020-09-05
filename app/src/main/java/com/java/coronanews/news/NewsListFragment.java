@@ -98,7 +98,7 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
             this.mPresenter.openNewsDetailUI(news, options.toBundle());
         });
 
-        mPresenter.subscribe();
+
     }
 
     @Override
@@ -155,7 +155,7 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
                 }
             }
         });
-
+        mPresenter.subscribe();
         return view;
     }
 
