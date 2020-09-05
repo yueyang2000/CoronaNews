@@ -41,17 +41,22 @@ class API {
         JSONArray list;
         NewsItem news = new NewsItem();
         news.plain_json = json_news.toString();
-        list = json_news.getJSONArray("data");
 
-        JSONObject jdata = list.getJSONObject(0);
+        JSONObject jdata = json_news;
         news._id = jdata.optString("_id");
         news.author = "";
-        list = jdata.getJSONArray("authors");
-        for(int i = 0; i<list.length(); i++)
-        {
-            JSONObject author = list.getJSONObject(i);
-            news.author = news.author + "/" +author.optString("name");
+        try{
+            list = jdata.getJSONArray("authors");
+            for(int i = 0; i<list.length(); i++)
+            {
+                JSONObject author = list.getJSONObject(i);
+                news.author = news.author + "/" +author.optString("name");
+            }
         }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
         news.content = jdata.optString("content");
         news.date = jdata.optString("data");
         news.influence = jdata.optString("influence");
@@ -60,10 +65,6 @@ class API {
         news.title = jdata.optString("title");
         news.type = jdata.optString("type");
         news.lang = jdata.optString("lang");
-        JSONObject statics = json_news.optJSONObject("pagination");
-        news.page = statics.optInt("page");
-        news.size = statics.optInt("size");
-        news.total = statics.optInt("total");
         return news;
     }
 
@@ -110,8 +111,8 @@ class API {
         }
     }
 
-    public static List<NewsItem> GetNews(final int pageNo, final int pageSize, final String type) throws IOException, JSONException {
-        String URL_String = new String(String.format("https://covid-dashboard.aminer.cn/api/events/list?type=%s&page=%d&size=%d", type, pageNo, pageSize));
+    public static List<NewsItem> GetNews(final int pageNo, final int pageSize, final int categiory) throws IOException, JSONException {
+        String URL_String = new String(String.format("https://covid-dashboard.aminer.cn/api/events/list?type=%s&page=%d&size=%d", Config.categorys[categiory], pageNo, pageSize));
         String body = GetBodyFromURL(URL_String);
         if(body.equals("")) {
             Log.d("warning","No body found.");
@@ -119,7 +120,7 @@ class API {
         }
         List<NewsItem> result = new ArrayList<NewsItem>();
         JSONObject allData = new JSONObject(body);
-        JSONArray list = allData.getJSONArray("list");
+        JSONArray list = allData.getJSONArray("data");
         for (int t = 0; t < list.length(); t++) {
             JSONObject json_news = list.getJSONObject(t);
             result.add(GetNewsFromJson(json_news));

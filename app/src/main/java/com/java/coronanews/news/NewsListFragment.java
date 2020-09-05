@@ -149,10 +149,13 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem == mAdapter.getItemCount() - 1
-                        && mAdapter.isShowFooter() && !mPresenter.isLoading()) {
-                    mPresenter.requireMoreNews();
+                if(newState == RecyclerView.SCROLL_STATE_IDLE){
+                    if (lastVisibleItem == mAdapter.getItemCount() - 1 &&
+                           mAdapter.isShowFooter()  && !mPresenter.isLoading()) { //SHAN QU ISFOOTER
+                        mPresenter.requireMoreNews();
+                    }
                 }
+
             }
         });
         mPresenter.subscribe();
@@ -195,7 +198,7 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
 
     @Override
     public void onSuccess(boolean loadCompleted) {
-        mAdapter.setFooterVisible(!loadCompleted);
+        //mAdapter.setFooterVisible(!loadCompleted);
         mSwipeRefreshWidget.setRefreshing(false);
     }
 

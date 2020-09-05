@@ -64,6 +64,7 @@ public class Manager {
             @Override
             public Publisher<NewsItem> apply(@NonNull Flowable<NewsItem> upstream) {
                 return upstream
+
                         .map(new FetchRead<NewsItem>());
             }
         };
@@ -114,12 +115,12 @@ public class Manager {
     }
 
 
-    public Single<List<NewsItem>> fetchSimpleNews(final int pageNo, final int pageSize, final String type) {
+    public Single<List<NewsItem>> fetchSimpleNews(final int pageNo, final int pageSize, final int category) {
         return Flowable.fromCallable(new Callable<List<NewsItem>>() {
             @Override
             public List<NewsItem> call() throws Exception {
                 try {
-                    return API.GetNews(pageNo, pageSize, type);
+                    return API.GetNews(pageNo, pageSize, category);
                 } catch(Exception e) {
                     return new ArrayList<NewsItem>();
                 }
@@ -128,7 +129,7 @@ public class Manager {
             @Override
             public Publisher<NewsItem> apply(@NonNull List<NewsItem> simpleNewses) throws Exception {
                 if (simpleNewses.size() > 0) return Flowable.fromIterable(simpleNewses);
-                return Flowable.fromIterable(fs.fetchSimple(pageNo, pageSize, type));
+                return Flowable.fromIterable(fs.fetchSimple(pageNo, pageSize, category)); //never reach
             }
         }).map(new Function<NewsItem, NewsItem>() {
             @Override
@@ -136,7 +137,7 @@ public class Manager {
                 fs.insertSimple(news, category);
                 return news;
             }
-        }).compose(this.liftAllSimple).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }).compose(this.liftAllSimple).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
 
     /**
@@ -154,12 +155,7 @@ public class Manager {
         }).flatMap(new Function<NewsItem, Publisher<NewsItem>>() {
             @Override
             public Publisher<NewsItem> apply(@NonNull NewsItem detailNews) throws Exception {
-                if (detailNews != NewsItem.NULL) return Flowable.just(detailNews);
-                try {
-                    return Flowable.just(API.GetDetailNews(news_ID)); // load from web
-                } catch (Exception e) {
-                    return Flowable.just(NewsItem.NULL);
-                }
+                return Flowable.just(detailNews);
             }
         }).compose(this.liftAllDetail).firstOrError().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
@@ -172,6 +168,7 @@ public class Manager {
      * @param category
      * @return
      */
+    /*
     public Single<List<NewsItem>> searchNews(final String keyword, final int pageNo, final int pageSize, final int category) {
         return Flowable.fromCallable(new Callable<List<NewsItem>>() {
             @Override
@@ -197,6 +194,9 @@ public class Manager {
         }).compose(this.liftAllSimple).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
 
+
+     */
+
     /**
      * 添加已读
      * @param news_ID
@@ -206,11 +206,6 @@ public class Manager {
             @Override
             public Object call() throws Exception {
                 NewsItem news = fs.fetchDetail(news_ID);
-                try {
-                    if (news == null) news = API.GetDetailNews(news_ID);
-                } catch(Exception e) {
-
-                }
                 if (news != null)  fs.insertRead(news_ID, news);
                 return new Object();
             }
@@ -223,6 +218,7 @@ public class Manager {
      *
      * @return 收藏列表
      */
+    /*
     public Single<List<NewsItem>> favorites() {
         return Flowable.fromCallable(new Callable<List<NewsItem>>() {
             @Override
@@ -236,7 +232,7 @@ public class Manager {
             }
         }).compose(this.liftAllSimple).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
-
+     */
 
 
     /**
@@ -262,6 +258,7 @@ public class Manager {
      * @param url 分享链接
      * @param imgUrl 图片链接
      */
+
     public static void shareNews(Activity activity, String title, String text, String url, String imgUrl) {
         API.ShareNews(activity, title, text, url, imgUrl);
     }

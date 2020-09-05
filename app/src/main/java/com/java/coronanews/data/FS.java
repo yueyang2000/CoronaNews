@@ -52,16 +52,16 @@ class FS {
         db_path = context.getFilesDir().getPath() + "/data.db";
         db = SQLiteDatabase.openOrCreateDatabase(db_path, null);
 
-        createSDBThread(context);
-        createWordPVThread(context);
+        //createSDBThread(context);
+        //createWordPVThread(context);
 
         // dropTables(); // FIXME
         createTables();
     }
 
     void waitForInit() throws InterruptedException {
-        if (sdb_thread != null && sdb_thread.isAlive()) sdb_thread.join();
-        if (word_pv_thread != null && word_pv_thread.isAlive()) word_pv_thread.join();
+//        if (sdb_thread != null && sdb_thread.isAlive()) sdb_thread.join();
+//        if (word_pv_thread != null && word_pv_thread.isAlive()) word_pv_thread.join();
     }
 
     Map<String, Integer> getWordPV() throws InterruptedException {
@@ -164,7 +164,7 @@ class FS {
         db.execSQL(String.format("DROP TABLE IF EXISTS `%s`", TABLE_NAME_WORD));
     }
 
-    void insertSimple(NewsItem simpleNews, int category) {
+    void insertSimple(NewsItem simpleNews, final int category) {
         String cmd = String.format("INSERT OR REPLACE INTO `%s`(%s, %s, %s) VALUES(%s, %s, %s)",
                 TABLE_NAME_SIMPLE,
                 KEY_ID, KEY_SIMPLE, KEY_CATEGORY,
@@ -174,13 +174,13 @@ class FS {
         db.execSQL(cmd);
     }
 
-    List<NewsItem> fetchSimple(int pageNo, int pageSize, int category) throws JSONException {
+    List<NewsItem> fetchSimple(int pageNo, int pageSize, final int category) throws JSONException {
         String cmd = String.format("SELECT * FROM `%s` WHERE %s=%s ORDER BY %s ASC LIMIT %s OFFSET %s",
                 TABLE_NAME_SIMPLE, KEY_CATEGORY, String.valueOf(category), KEY_ID, String.valueOf(pageSize), String.valueOf(pageSize*pageNo-pageSize));
         Cursor cursor = db.rawQuery(cmd, null);
         List<NewsItem> list = new ArrayList<NewsItem>();
         while(cursor.moveToNext()) {
-            list.add(API.GetNewsFromJson(new JSONObject(cursor.getString(cursor.getColumnIndex(KEY_SIMPLE))), true));
+            list.add(API.GetNewsFromJson(new JSONObject(cursor.getString(cursor.getColumnIndex(KEY_SIMPLE)))));
         }
         cursor.close();
         return list;
@@ -200,7 +200,7 @@ class FS {
         Cursor cursor = db.rawQuery(cmd, null);
         NewsItem detailNews = null;
         if (cursor.moveToFirst()) {
-            detailNews = API.GetNewsFromJson(new JSONObject(cursor.getString(cursor.getColumnIndex(KEY_DETAIL))), true);
+            detailNews = API.GetNewsFromJson(new JSONObject(cursor.getString(cursor.getColumnIndex(KEY_DETAIL))));
         }
         cursor.close();
         return detailNews;
@@ -229,12 +229,13 @@ class FS {
         Cursor cursor = db.rawQuery(cmd, null);
         List<NewsItem> results = new ArrayList<NewsItem>();
         while(cursor.moveToNext()) {
-            results.add(API.GetDetailNewsFromJson(new JSONObject(cursor.getString(cursor.getColumnIndex(KEY_DETAIL))), true));
+            results.add(API.GetNewsFromJson(new JSONObject(cursor.getString(cursor.getColumnIndex(KEY_DETAIL)))));
         }
         cursor.close();
         return results;
     }
 
+    /*
     void insertFavorite(String news_ID, NewsItem news) {
         String cmd = String.format("INSERT OR REPLACE INTO `%s`(%s, %s) VALUES(%s, %s)",
                 TABLE_NAME_FAVORITE, KEY_ID, KEY_DETAIL,
@@ -271,8 +272,10 @@ class FS {
         return list;
     }
 
+     */
 
 
+    /*
     List<NewsItem> fetchAllFromSampleNotRead() throws JSONException, InterruptedException {
         if (sdb_thread.isAlive()) sdb_thread.join();
 
@@ -301,6 +304,7 @@ class FS {
         }
         return results;
     }
+     */
 
     NewsItem fetchDetailFromSample(String news_ID) throws InterruptedException, JSONException {
         if (sdb_thread.isAlive()) sdb_thread.join();
@@ -310,7 +314,7 @@ class FS {
         Cursor cursor = sdb.rawQuery(cmd, null);
         NewsItem news = null;
         if (cursor.moveToFirst()) {
-            news = API.GetDetailNewsFromJson(new JSONObject(cursor.getString(cursor.getColumnIndex(KEY_DETAIL))), true);
+            news = API.GetNewsFromJson(new JSONObject(cursor.getString(cursor.getColumnIndex(KEY_DETAIL))));
         }
         cursor.close();
         return news;

@@ -23,8 +23,8 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class Config {
-    public String []categorys = {"News", "Paper"};
-    public int category_cnt = 2;
+    public static String []categorys = {"News", "Paper"};
+    public static int category_cnt = 2;
 
     public static class Category {
         public String title;

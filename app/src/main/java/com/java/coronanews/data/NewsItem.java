@@ -18,7 +18,6 @@ public class NewsItem {
 
     public int page = 0;
     public int size = 0;
-    public int total = 0;
 
     public boolean has_read = false;
     public NewsItem(){}

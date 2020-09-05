@@ -107,7 +107,8 @@ public class NewsListPresenter implements NewsListContract.Presenter {
                 if (start != mLastFetchStart) return;
 
                 mLoading = false;
-                if (mKeyword.trim().length() != 0 || mCategory > 0) {
+
+                if (mKeyword.trim().length() != 0) {
                     mView.onSuccess(simpleNewses.size() == 0);
                     if (simpleNewses.size() == 1 && simpleNewses.get(0) == NewsItem.NULL) {
                         simpleNewses.clear();
@@ -121,14 +122,16 @@ public class NewsListPresenter implements NewsListContract.Presenter {
                     if (mPageNo == 1 && simpleNewses.size() > 0 && simpleNewses.size() < 10)
                         requireMoreNews();
                 } else {
-                    if (mPageNo > 1 || simpleNewses.size() == 0) {
+                    if (mPageNo > 1) {
                         mView.onSuccess(true);
-                        mView.appendNewsList(new ArrayList<>());
+                        mView.appendNewsList(simpleNewses);
                     } else {
                         mView.onSuccess(false);
                         mView.setNewsList(simpleNewses);
                     }
                 }
+
+
             }
         });
 
