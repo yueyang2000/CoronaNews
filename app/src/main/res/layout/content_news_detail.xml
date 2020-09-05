@@ -8,7 +8,7 @@
     android:scrollbars="vertical"
     android:layerType="software"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".news.newsdetail.NewsDetailActivity"
+    tools:context=".news.NewsDetailActivity"
     tools:showIn="@layout/activity_news_detail">
 
     <FrameLayout
@@ -22,11 +22,11 @@
         android:paddingStart="16dp"
         android:paddingTop="16dp">
 
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progress_bar"-->
+<!--            style="?android:attr/progressBarStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content" />-->
 
         <LinearLayout
             android:id="@+id/layout_content"

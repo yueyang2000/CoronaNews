@@ -89,13 +89,13 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
                 this.mLastClickPosition = position;
             } else
                 this.mLastClickPosition = -1;
-            View transitionView = itemView.findViewById(R.id.image_view);
+//            View transitionView = itemView.findViewById(R.id.image_view);
+//
+//            ActivityOptionsCompat options =
+//                    ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
+//                            transitionView, getString(R.string.transition_news_img));
 
-            ActivityOptionsCompat options =
-                    ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
-                            transitionView, getString(R.string.transition_news_img));
-
-            this.mPresenter.openNewsDetailUI(news, options.toBundle());
+            this.mPresenter.openNewsDetailUI(news, new Bundle());
         });
 
 
@@ -104,9 +104,6 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
     @Override
     public void onResume() {
         super.onResume();
-        // FIXME notify other view page
-//        if (mLastClickPosition >= 0) // 在离线情况下，点击不代表已读
-//            mAdapter.notifyItemChanged(mLastClickPosition);
         if (mLastClickPosition >= 0 && mPresenter != null)
             mPresenter.fetchNewsRead(mLastClickPosition, mAdapter.getNews(mLastClickPosition));
     }
@@ -151,7 +148,7 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
                 super.onScrollStateChanged(recyclerView, newState);
                 if(newState == RecyclerView.SCROLL_STATE_IDLE){
                     if (lastVisibleItem == mAdapter.getItemCount() - 1 &&
-                           mAdapter.isShowFooter()  && !mPresenter.isLoading()) { //SHAN QU ISFOOTER
+                           mAdapter.isShowFooter()  && !mPresenter.isLoading()) { //delete ISFOOTER
                         mPresenter.requireMoreNews();
                     }
                 }

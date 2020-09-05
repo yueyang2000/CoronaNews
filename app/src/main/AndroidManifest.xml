@@ -45,53 +45,53 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".news.newsdetail.NewsDetailActivity"
+            android:name=".news.NewsDetailActivity"
             android:label="@string/title_activity_news_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <!-- 分享相关设置 -->
-        <meta-data
-            android:name="tencent_qq_appid"
-            android:value="@string/tencent_qq_appid" />
-        <meta-data
-            android:name="weixin_key"
-            android:value="@string/weixin_key" />
-        <meta-data
-            android:name="sina_weibo_redirecturi"
-            android:value="@string/sina_weibo_redirecturi" />
-        <meta-data
-            android:name="sina_weibo_key"
-            android:value="@string/sina_weibo_key" />
-        <!-- 微信分享注册 -->
-        <activity
-            android:name=".main.wxapi.WXEntryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+<!--        &lt;!&ndash; 分享相关设置 &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="tencent_qq_appid"-->
+<!--            android:value="@string/tencent_qq_appid" />-->
+<!--        <meta-data-->
+<!--            android:name="weixin_key"-->
+<!--            android:value="@string/weixin_key" />-->
+<!--        <meta-data-->
+<!--            android:name="sina_weibo_redirecturi"-->
+<!--            android:value="@string/sina_weibo_redirecturi" />-->
+<!--        <meta-data-->
+<!--            android:name="sina_weibo_key"-->
+<!--            android:value="@string/sina_weibo_key" />-->
+<!--        &lt;!&ndash; 微信分享注册 &ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name=".main.wxapi.WXEntryActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:exported="true"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
 
-        <!-- QQ SDK 需要註冊Activity -->
-        <activity
-            android:name="com.tencent.connect.common.AssistActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="behind"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
-            android:name="com.tencent.tauth.AuthActivity"
-            android:launchMode="singleTask"
-            android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+<!--        &lt;!&ndash; QQ SDK 需要註冊Activity &ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="com.tencent.connect.common.AssistActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden"-->
+<!--            android:screenOrientation="behind"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+<!--        <activity-->
+<!--            android:name="com.tencent.tauth.AuthActivity"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:noHistory="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
 
-                <data android:scheme="tencent222222" />
-                <!-- 100380359 100381104 222222 -->
-            </intent-filter>
-        </activity>
-        <!-- QQ SDK 需要注册 Activity -->
+<!--                <data android:scheme="tencent222222" />-->
+<!--                &lt;!&ndash; 100380359 100381104 222222 &ndash;&gt;-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        &lt;!&ndash; QQ SDK 需要注册 Activity &ndash;&gt;-->
     </application>
 
 </manifest>

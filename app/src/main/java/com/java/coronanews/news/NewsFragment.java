@@ -73,6 +73,7 @@ public class NewsFragment extends Fragment {
 
         mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         mTabLayout.setupWithViewPager(mViewPager);
+        mTabLayout.removeAllTabs();
         for (int i = 0; i < mCategories.size(); i++)
             mTabLayout.addTab(mTabLayout.newTab().setText(mCategories.get(i)));
         mViewPager.setAdapter(mPagerAdapter);

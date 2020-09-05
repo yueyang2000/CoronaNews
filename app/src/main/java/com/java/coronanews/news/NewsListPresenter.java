@@ -1,5 +1,6 @@
 package com.java.coronanews.news;
 
+import android.content.Intent;
 import android.os.Bundle;
 import java.util.*;
 
@@ -67,12 +68,14 @@ public class NewsListPresenter implements NewsListContract.Presenter {
 
     @Override
     public void openNewsDetailUI(NewsItem news, Bundle options) {
-//        Intent intent = new Intent(mView.context(), NewsDetailActivity.class);
-//        intent.putExtra(NewsDetailActivity.NEWS_ID, news.news_ID);
-//        intent.putExtra(NewsDetailActivity.NEWS_TITLE, news.news_Title);
-//        intent.putExtra(NewsDetailActivity.NEWS_PICTURE_URL, news.picture_url);
-//        intent.putExtra(NewsDetailActivity.NEWS_IS_FAVORITED, news.is_favorite);
-//        mView.start(intent, options);
+        Intent intent = new Intent(mView.context(), NewsDetailActivity.class);
+        intent.putExtra("NEWS_TITLE", news.title);
+        String info = (news.author.isEmpty() ? news.source : news.author) + "　" + news.date;
+        intent.putExtra("NEWS_INFO", info);
+        intent.putExtra("NEWS_CONTENT", news.content);
+        intent.putExtra("NEWS_type", news.type);
+        mView.start(intent, options);
+
     }
 
     @Override
@@ -87,10 +90,6 @@ public class NewsListPresenter implements NewsListContract.Presenter {
     }
 
     private void fetchNews() {
-//        ArrayList<NewsItem> arr = new ArrayList<>();
-//        arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem()); arr.add(new NewsItem());
-//        System.out.println(mView);
-//        mView.setNewsList(arr);
 
 
         final long start = System.currentTimeMillis();

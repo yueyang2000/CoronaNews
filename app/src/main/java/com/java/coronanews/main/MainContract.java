@@ -18,16 +18,6 @@ public interface MainContract {
         void switchToNews();
 
         /**
-         * 切换到收藏页面
-         */
-        void switchToFavorites();
-
-        /**
-         * 切换到设置页面
-         */
-        void switchToSettings();
-
-        /**
          * 切换到关于页面
          */
         void switchToAbout();

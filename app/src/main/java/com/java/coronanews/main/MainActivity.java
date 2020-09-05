@@ -23,8 +23,7 @@ import android.view.inputmethod.InputMethodManager;
 import com.java.coronanews.R;
 import com.java.coronanews.about.AboutFragment;
 import com.java.coronanews.news.NewsFragment;
-//import com.java.coronanews.favorites.FavoritesFragment;
-//import com.java.coronanews.settings.SettingsFragment;
+
 
 /**
  * Created by equation on 9/7/17.
@@ -168,21 +167,6 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mNews).commit();
     }
 
-    @Override
-    public void switchToFavorites() {
-//        switchTo(R.id.nav_favorites, "收藏");
-//        if (mFavorites == null)
-//            mFavorites = FavoritesFragment.newInstance();
-//        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mFavorites).commit();
-    }
-
-    @Override
-    public void switchToSettings() {
-//        switchTo(R.id.nav_settings, "设置");
-//        if (mSettings == null)
-//            mSettings = SettingsFragment.newInstance();
-//        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mSettings).commit();
-    }
 
     @Override
     public void switchToAbout() {

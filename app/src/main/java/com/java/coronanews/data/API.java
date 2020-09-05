@@ -38,34 +38,7 @@ class API {
     static String[] url_type = {"all", "event", "points", "news", "paper"};
 
     static NewsItem GetNewsFromJson(JSONObject json_news) throws JSONException {
-        JSONArray list;
-        NewsItem news = new NewsItem();
-        news.plain_json = json_news.toString();
-
-        JSONObject jdata = json_news;
-        news._id = jdata.optString("_id");
-        news.author = "";
-        try{
-            list = jdata.getJSONArray("authors");
-            for(int i = 0; i<list.length(); i++)
-            {
-                JSONObject author = list.getJSONObject(i);
-                news.author = news.author + "/" +author.optString("name");
-            }
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-
-        news.content = jdata.optString("content");
-        news.date = jdata.optString("data");
-        news.influence = jdata.optString("influence");
-        news.source = jdata.optString("source");
-        news.time = jdata.optString("time");
-        news.title = jdata.optString("title");
-        news.type = jdata.optString("type");
-        news.lang = jdata.optString("lang");
-        return news;
+        return NewsItem.parseJSON(json_news);
     }
 
     /**
