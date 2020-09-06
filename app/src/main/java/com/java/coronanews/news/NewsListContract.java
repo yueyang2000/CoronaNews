@@ -72,11 +72,8 @@ public interface NewsListContract {
          */
         void openNewsDetailUI(NewsItem news, Bundle options);
 
-        /**
-         * 从数据库载入是否已读
-         * @param news
-         */
-        void fetchNewsRead(int pos, NewsItem news);
+
+        void fetchNewsRead(int pos);
 
         /**
          * 设置搜索关键字

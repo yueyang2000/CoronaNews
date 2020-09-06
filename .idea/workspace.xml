@@ -7,30 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a127711-9eb3-4008-8671-b7bd880009f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsDetailActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history/HistoryContract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history/HistoryFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history/HistoryPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/API.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/NewsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/NewsItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/AC_AutoMaton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/AhoCorasick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/FS.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/FS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListContract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_news_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_news_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_news_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_news_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/detail_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/detail_news.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +69,7 @@
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -92,6 +86,7 @@
       <recent name="com.java.coronanews.data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews" />
@@ -179,14 +174,18 @@
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state x="-1560" y="-346" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599113093212" />
+    <state x="-1211" y="-291" key="#com.intellij.ide.util.MemberChooser" timestamp="1599360284944">
+      <screen x="-2048" y="-572" width="2048" height="1129" />
+    </state>
+    <state x="-1211" y="-291" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599360284944" />
     <state x="-1261" y="-129" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1599191502195">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state x="-1261" y="-129" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599191502195" />
-    <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599206805850">
+    <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599357648817">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599206805850" />
+    <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648817" />
     <state x="-1436" y="-246" key="AndroidCreateResourceDirectoryDialog" timestamp="1599200942039">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
@@ -195,38 +194,38 @@
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state x="-1168" y="-235" key="AndroidProcessChooserDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599206706283" />
-    <state width="2006" height="281" key="GridCell.Tab.0.bottom" timestamp="1599321325226">
+    <state width="2006" height="281" key="GridCell.Tab.0.bottom" timestamp="1599357648986">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="281" key="GridCell.Tab.0.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599321325226" />
-    <state width="2006" height="281" key="GridCell.Tab.0.center" timestamp="1599321325225">
+    <state width="2006" height="281" key="GridCell.Tab.0.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648986" />
+    <state width="2006" height="281" key="GridCell.Tab.0.center" timestamp="1599357648986">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="281" key="GridCell.Tab.0.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599321325225" />
-    <state width="2006" height="281" key="GridCell.Tab.0.left" timestamp="1599321325225">
+    <state width="2006" height="281" key="GridCell.Tab.0.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648986" />
+    <state width="2006" height="281" key="GridCell.Tab.0.left" timestamp="1599357648985">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="281" key="GridCell.Tab.0.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599321325225" />
-    <state width="2006" height="281" key="GridCell.Tab.0.right" timestamp="1599321325226">
+    <state width="2006" height="281" key="GridCell.Tab.0.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648985" />
+    <state width="2006" height="281" key="GridCell.Tab.0.right" timestamp="1599357648986">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="281" key="GridCell.Tab.0.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599321325226" />
-    <state width="2006" height="281" key="GridCell.Tab.1.bottom" timestamp="1599321325227">
+    <state width="2006" height="281" key="GridCell.Tab.0.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648986" />
+    <state width="2006" height="281" key="GridCell.Tab.1.bottom" timestamp="1599357648987">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="281" key="GridCell.Tab.1.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599321325227" />
-    <state width="2006" height="281" key="GridCell.Tab.1.center" timestamp="1599321325227">
+    <state width="2006" height="281" key="GridCell.Tab.1.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648987" />
+    <state width="2006" height="281" key="GridCell.Tab.1.center" timestamp="1599357648987">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="281" key="GridCell.Tab.1.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599321325227" />
-    <state width="2006" height="281" key="GridCell.Tab.1.left" timestamp="1599321325226">
+    <state width="2006" height="281" key="GridCell.Tab.1.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648987" />
+    <state width="2006" height="281" key="GridCell.Tab.1.left" timestamp="1599357648987">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="281" key="GridCell.Tab.1.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599321325226" />
-    <state width="2006" height="281" key="GridCell.Tab.1.right" timestamp="1599321325227">
+    <state width="2006" height="281" key="GridCell.Tab.1.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648987" />
+    <state width="2006" height="281" key="GridCell.Tab.1.right" timestamp="1599357648987">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="281" key="GridCell.Tab.1.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599321325227" />
+    <state width="2006" height="281" key="GridCell.Tab.1.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599357648987" />
     <state x="-1354" y="-175" key="com.intellij.ide.util.TipDialog" timestamp="1599184786965">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>

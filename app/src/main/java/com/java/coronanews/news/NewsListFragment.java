@@ -105,7 +105,8 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
     public void onResume() {
         super.onResume();
         if (mLastClickPosition >= 0 && mPresenter != null)
-            mPresenter.fetchNewsRead(mLastClickPosition, mAdapter.getNews(mLastClickPosition));
+            //mAdapter.getNews(mLastClickPosition).has_read = true;
+            mPresenter.fetchNewsRead(mLastClickPosition);
     }
 
     @Override

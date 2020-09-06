@@ -68,6 +68,7 @@ public class NewsListPresenter implements NewsListContract.Presenter {
 
     @Override
     public void openNewsDetailUI(NewsItem news, Bundle options) {
+        Manager.I.touchRead(news);
         Intent intent = new Intent(mView.context(), NewsDetailActivity.class);
         intent.putExtra("NEWS_TITLE", news.title);
         String info = (news.author.isEmpty() ? news.source : news.author) + "　" + news.date;
@@ -75,18 +76,11 @@ public class NewsListPresenter implements NewsListContract.Presenter {
         intent.putExtra("NEWS_CONTENT", news.content);
         intent.putExtra("NEWS_type", news.type);
         mView.start(intent, options);
-
     }
 
     @Override
-    public void fetchNewsRead(final int pos, NewsItem news) {
-//        Manager.I.fetchDetailNews(news.news_ID)
-//                .subscribe(new Consumer<DetailNews>() {
-//                    @Override
-//                    public void accept(DetailNews detailNews) throws Exception {
-//                        mView.resetItemRead(pos, detailNews.has_read);
-//                    }
-//                });
+    public void fetchNewsRead(final int pos) {
+        mView.resetItemRead(pos, true);
     }
 
     private void fetchNews() {
@@ -97,7 +91,7 @@ public class NewsListPresenter implements NewsListContract.Presenter {
         mLastFetchStart = start;
         Single<List<NewsItem>> single = null;
 
-        single = Manager.I.fetchSimpleNews(mPageNo, PAGE_SIZE, mCategory);
+        single = Manager.I.fetchNews(mPageNo, PAGE_SIZE, mCategory);
 
         single.subscribe(new Consumer<List<NewsItem>>() {
             @Override

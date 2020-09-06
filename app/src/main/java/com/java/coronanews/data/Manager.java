@@ -51,55 +51,15 @@ public class Manager {
 
     private FS fs;
     private Config config;
-    private AC_AutoMaton ac;
-    private Thread ac_thread;
     private FlowableTransformer<NewsItem, NewsItem> liftAllSimple;
     private FlowableTransformer<NewsItem, NewsItem> liftAllDetail;
 
     private Manager(final Context context) throws IOException {
         this.fs = new FS(context);
         this.config = new Config(context);
-        this.ac = new AC_AutoMaton();
-        this.liftAllSimple = new FlowableTransformer<NewsItem, NewsItem>() {
-            @Override
-            public Publisher<NewsItem> apply(@NonNull Flowable<NewsItem> upstream) {
-                return upstream
-
-                        .map(new FetchRead<NewsItem>());
-            }
-        };
-        this.liftAllDetail = new FlowableTransformer<NewsItem, NewsItem>() {
-            @Override
-            public Publisher<NewsItem> apply(@NonNull Flowable<NewsItem> upstream) {
-                return upstream
-                        .map(new Function<NewsItem, NewsItem>() {
-                            @Override
-                            public NewsItem apply(@NonNull NewsItem news) throws Exception {
-                                if (news == NewsItem.NULL) return news;
-                                fs.insertDetail(news);
-                                return news;
-                            }
-                        })
-                        .map(new FetchRead<NewsItem>());
-            }
-        };
     }
 
     public Single<Boolean> waitForInit() {
-        ac_thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    for(String key: fs.getWordPV().keySet()) {
-                        ac.add(key, fs.getWordPV().get(key));
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                ac.fix();
-            }
-        });
-        ac_thread.start();
 
         return Single.fromCallable(new Callable<Boolean>() {
             @Override
@@ -115,7 +75,7 @@ public class Manager {
     }
 
 
-    public Single<List<NewsItem>> fetchSimpleNews(final int pageNo, final int pageSize, final int category) {
+    public Single<List<NewsItem>> fetchNews(final int pageNo, final int pageSize, final int category) {
         return Flowable.fromCallable(new Callable<List<NewsItem>>() {
             @Override
             public List<NewsItem> call() throws Exception {
@@ -128,85 +88,22 @@ public class Manager {
         }).flatMap(new Function<List<NewsItem>, Publisher<NewsItem>>() {
             @Override
             public Publisher<NewsItem> apply(@NonNull List<NewsItem> simpleNewses) throws Exception {
-                if (simpleNewses.size() > 0) return Flowable.fromIterable(simpleNewses);
-                return Flowable.fromIterable(fs.fetchSimple(pageNo, pageSize, category)); //never reach
-            }
-        }).map(new Function<NewsItem, NewsItem>() {
-            @Override
-            public NewsItem apply(@NonNull NewsItem news) throws Exception {
-                fs.insertSimple(news, category);
-                return news;
-            }
-        }).compose(this.liftAllSimple).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
-    }
-
-    /**
-     * 获取新闻
-     * @param news_ID
-     * @return 如果成功，则返回新闻对象，否则返回DetailNews.NULL
-     */
-    public Single<NewsItem> fetchDetailNews(final String news_ID) {
-        return Flowable.fromCallable(new Callable<NewsItem>() {
-            @Override
-            public NewsItem call() throws Exception {
-                NewsItem news = fs.fetchDetail(news_ID); // load from disk
-                return news != null ? news : NewsItem.NULL;
-            }
-        }).flatMap(new Function<NewsItem, Publisher<NewsItem>>() {
-            @Override
-            public Publisher<NewsItem> apply(@NonNull NewsItem detailNews) throws Exception {
-                return Flowable.just(detailNews);
-            }
-        }).compose(this.liftAllDetail).firstOrError().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
-    }
-
-    /**
-     * 搜索新闻
-     * @param keyword
-     * @param pageNo
-     * @param pageSize
-     * @param category
-     * @return
-     */
-    /*
-    public Single<List<NewsItem>> searchNews(final String keyword, final int pageNo, final int pageSize, final int category) {
-        return Flowable.fromCallable(new Callable<List<NewsItem>>() {
-            @Override
-            public List<NewsItem> call() throws Exception {
-                try {
-                    return API.SearchNews(keyword, pageNo, pageSize, category);
-                } catch(Exception e) {
-                    e.printStackTrace();
-                    return new ArrayList<NewsItem>();
-                }
-            }
-        }).flatMap(new Function<List<NewsItem>, Publisher<? extends NewsItem>>() {
-            @Override
-            public Publisher<? extends NewsItem> apply(@NonNull List<NewsItem> simpleNewses) throws Exception {
                 return Flowable.fromIterable(simpleNewses);
             }
         }).map(new Function<NewsItem, NewsItem>() {
             @Override
-            public NewsItem apply(@NonNull NewsItem simpleNews) throws Exception {
-                simpleNews.from_search = true;
-                return simpleNews;
+            public NewsItem apply(@NonNull NewsItem news) throws Exception {
+                news.has_read = fs.hasRead(news._id);
+                return news;
             }
-        }).compose(this.liftAllSimple).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
 
-
-     */
-
-    /**
-     * 添加已读
-     * @param news_ID
-     */
-    public void touchRead(final String news_ID) {
+    public void touchRead(final NewsItem news) {
         Single.fromCallable(new Callable<Object>() {
             @Override
             public Object call() throws Exception {
-                NewsItem news = fs.fetchDetail(news_ID);
-                if (news != null)  fs.insertRead(news_ID, news);
+                if (news != null)  fs.insertRead(news);
                 return new Object();
             }
         }).subscribeOn(Schedulers.io()).subscribe();
@@ -218,21 +115,20 @@ public class Manager {
      *
      * @return 收藏列表
      */
-    /*
-    public Single<List<NewsItem>> favorites() {
+
+    public Single<List<NewsItem>> history() {
         return Flowable.fromCallable(new Callable<List<NewsItem>>() {
             @Override
             public List<NewsItem> call() throws Exception {
-                return fs.fetchFavorite();
+                return fs.fetchRead();
             }
         }).flatMap(new Function<List<NewsItem>, Publisher<NewsItem>>() { // 展开
             @Override
             public Publisher<NewsItem> apply(@NonNull List<NewsItem> news) throws Exception {
                 return Flowable.fromIterable(news);
             }
-        }).compose(this.liftAllSimple).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
-     */
 
 
     /**
