@@ -75,6 +75,25 @@ public class Manager {
         return config;
     }
 
+    public Single<List<COVIDInfo>> fetchInfo(String keyword){
+        return Flowable.fromCallable(new Callable<List<COVIDInfo>>() {
+            @Override
+            public List<COVIDInfo> call() throws Exception{
+                try{
+                    return API.GetCOVIDInfo(keyword);
+                }
+                catch(Exception e){
+                    return new ArrayList<COVIDInfo>();
+                }
+            }
+        }).flatMap(new Function<List<COVIDInfo>, Publisher<COVIDInfo>>() {
+            @Override
+            public Publisher<COVIDInfo> apply(@NonNull List<COVIDInfo> infos) throws Exception {
+                return Flowable.fromIterable(infos);
+            }
+        }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+    }
+
 
     public Single<List<NewsItem>> fetchNews(final int pageNo, final int pageSize, final int category, String keyword) {
         return Flowable.fromCallable(new Callable<List<NewsItem>>() {
@@ -153,6 +172,27 @@ public class Manager {
             @Override
             public Publisher<NewsItem> apply(@NonNull List<NewsItem> news) throws Exception {
                 return Flowable.fromIterable(news);
+            }
+        }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+    }
+
+
+    public Single<List<COVIDInfo>> fetchRelatedInfo(List<String>name)
+    {
+        return Flowable.fromCallable(new Callable<List<COVIDInfo>>() {
+            @Override
+            public List<COVIDInfo> call() throws Exception{
+                try{
+                    return API.GetRelatedInfo(name);
+                }
+                catch(Exception e){
+                    return new ArrayList<COVIDInfo>();
+                }
+            }
+        }).flatMap(new Function<List<COVIDInfo>, Publisher<COVIDInfo>>() {
+            @Override
+            public Publisher<COVIDInfo> apply(@NonNull List<COVIDInfo> infos) throws Exception {
+                return Flowable.fromIterable(infos);
             }
         }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }

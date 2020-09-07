@@ -27,6 +27,8 @@ public interface MainContract {
          * 切换到history页面
          */
         void switchToHistory ();
+
+        void switchToInfo();
     }
 
     interface Presenter extends BasePresenter {

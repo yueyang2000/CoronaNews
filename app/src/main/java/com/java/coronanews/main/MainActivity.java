@@ -23,7 +23,7 @@ import com.java.coronanews.about.AboutFragment;
 import com.java.coronanews.chart.PaintChartFragment;
 import com.java.coronanews.history.HistoryFragment;
 import com.java.coronanews.news.NewsFragment;
-
+import com.java.coronanews.info.InfoFragment;
 /**
  * Created by equation on 9/7/17.
  */
@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity
     private Toolbar mToolbar;
     private NavigationView mNavigationView;
     private MainContract.Presenter mPresenter;
-    private Fragment mNews, mHistory, mChart, mAbout;
+    private Fragment mNews, mHistory, mChart, mAbout, mInfo;
     private MenuItem mSearchItem;
     private SearchView mSearchView;
     private String mKeyword = "";
-
+    int cur_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,12 +85,13 @@ public class MainActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main, menu);
 
         mSearchItem = menu.findItem(R.id.action_search);
-        mSearchItem.setVisible(R.id.nav_news == mPresenter.getCurrentNavigation());
+        mSearchItem.setVisible(R.id.nav_news == mPresenter.getCurrentNavigation() || R.id.nav_info == mPresenter.getCurrentNavigation());
         mSearchView = (SearchView) mSearchItem.getActionView();
         mSearchView.setOnCloseListener(() -> {
             if (!mKeyword.isEmpty()) {
                 mKeyword = "";
-//                ((NewsFragment) mNews).setKeyword("");
+                if(R.id.nav_news == mPresenter.getCurrentNavigation())
+                    ((NewsFragment) mNews).setKeyword("");
             }
             return false;
         });
@@ -102,6 +103,9 @@ public class MainActivity extends AppCompatActivity
                 System.out.println(mPresenter.getCurrentNavigation() + "  " + R.id.nav_news);
                 if (mPresenter.getCurrentNavigation() == R.id.nav_news && mNews != null)
                     ((NewsFragment) mNews).setKeyword(query);
+                if(mPresenter.getCurrentNavigation() == R.id.nav_info && mInfo != null){
+                    ((InfoFragment) mInfo).setKeyword(query);
+                }
                 mSearchView.clearFocus();
                 return false;
             }
@@ -147,9 +151,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void switchTo(int id, String title) {
+        cur_id = id;
         mToolbar.setTitle(title);
         if (mSearchItem != null) {
-            mSearchItem.setVisible(R.id.nav_news == id);
+            mSearchItem.setVisible(R.id.nav_news == id || R.id.nav_info == id);
         }
         if (mSearchView != null) {
             mSearchView.clearFocus();
@@ -157,6 +162,9 @@ public class MainActivity extends AppCompatActivity
         }
         mNavigationView.setCheckedItem(id);
     }
+
+
+
 
     @Override
     public void switchToNews() {
@@ -177,7 +185,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void switchToChart() {
-        switchTo(R.id.nav_data, "绘图");
+        switchTo(R.id.nav_data, "疫情信息");
         if (mChart == null)
             mChart = PaintChartFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mChart).commit();
@@ -189,4 +197,14 @@ public class MainActivity extends AppCompatActivity
             mHistory = HistoryFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mHistory).commit();
     }
+
+    @Override
+    public void switchToInfo() {
+        switchTo(R.id.nav_info, "疫情图谱");
+        if(mInfo == null){
+            mInfo = InfoFragment.newInstance();
+        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mInfo).commit();
+    }
+
 }

@@ -1,16 +1,11 @@
-package com.java.coronanews.history;
+package com.java.coronanews.info;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -18,8 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.java.coronanews.R;
-import com.java.coronanews.data.NewsItem;
-import com.java.coronanews.news.NewsAdapter;
+import com.java.coronanews.data.COVIDInfo;
 
 import java.util.List;
 
@@ -27,20 +21,20 @@ import java.util.List;
  * 收藏列表
  * Created by equation on 9/12/17.
  * A simple {@link Fragment} subclass.
- * Use the {@link HistoryFragment#newInstance} factory method to
+ * Use the {@link InfoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 
-public class HistoryFragment extends Fragment implements HistoryContract.View {
+public class InfoFragment extends Fragment implements InfoContract.View {
 
-    private HistoryContract.Presenter mPresenter;
-
+    private InfoContract.Presenter mPresenter;
+    private String mKeyword;
     private RecyclerView mRecyclerView;
-    private NewsAdapter mAdapter;
+    private InfoAdapter mAdapter;
     private LinearLayoutManager mLayoutManager;
     private int mLastClickPosition = -1;
 
-    public HistoryFragment() {
+    public InfoFragment() {
         // Required empty public constructor
     }
 
@@ -50,8 +44,8 @@ public class HistoryFragment extends Fragment implements HistoryContract.View {
      *
      * @return A new instance of fragment NewsListFragment.
      */
-    public static HistoryFragment newInstance() {
-        HistoryFragment fragment = new HistoryFragment();
+    public static InfoFragment newInstance() {
+        InfoFragment fragment = new InfoFragment();
         return fragment;
     }
 
@@ -59,25 +53,32 @@ public class HistoryFragment extends Fragment implements HistoryContract.View {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mLastClickPosition = -1;
-
-        mAdapter = new NewsAdapter(getContext());
-        mAdapter.setFooterVisible(false);
+        mKeyword = "";
+        mAdapter = new InfoAdapter(getContext());
         mAdapter.setOnItemClickListener((View itemView, int position) -> {
-            NewsItem news = mAdapter.getNews(position);
+            COVIDInfo info = mAdapter.getInfo(position);
             this.mLastClickPosition = position;
 
-            this.mPresenter.openNewsDetailUI(news, new Bundle());
+            this.mPresenter.openNewsDetailUI(info, new Bundle());
         });
 
-        mPresenter = new HistoryPresenter(this);
+        mPresenter = new InfoPresenter(this);
         mPresenter.subscribe();
+    }
+
+    public void setKeyword(String keyword){
+        mKeyword = keyword;
+        mPresenter.setKeyword(keyword);
+        if(keyword.equals(""))
+            setFooterVisible(true);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_history, container, false);
+        View view = inflater.inflate(R.layout.fragment_info, container, false);
 
         mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycle_view);
@@ -91,13 +92,20 @@ public class HistoryFragment extends Fragment implements HistoryContract.View {
 
 
     @Override
-    public void setPresenter(HistoryContract.Presenter presenter) {
+    public void setPresenter(InfoContract.Presenter presenter) {
         this.mPresenter = presenter;
     }
 
     @Override
-    public void setHistory(List<NewsItem> list) {
+    public void setInfo(List<COVIDInfo> list) {
         mAdapter.setData(list);
+        mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void setFooterVisible(boolean flag)
+    {
+        mAdapter.setFooterVisible(flag);
     }
 
     @Override
@@ -110,8 +118,5 @@ public class HistoryFragment extends Fragment implements HistoryContract.View {
         startActivityForResult(intent, 0, options);
     }
 
-    public void clean_history(){
-        Toast.makeText(this.getActivity(), "清除历史", Toast.LENGTH_SHORT);
-    }
 
 }

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">CoronaNews</string>
     <string name="title_activity_news_detail">NewsDetailActivity</string>
+    <string name="title_activity_info_detail">NewsInfoActivity</string>
     <string name="title_activity_wxentry">WXEntryActivit</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -11,6 +12,7 @@
     <string name="nav_news_title">新闻</string>
     <string name="nav_history_title">历史</string>
     <string name="nav_data_title">疫情数据</string>
+    <string name="nav_info_title">疫情图谱</string>
     <string name="nav_about_title">关于</string>
     <string name="action_favorite">收藏</string>
     <string name="action_unfavorite">取消收藏</string>
@@ -25,7 +27,7 @@
     <string name="about_us">关于我们</string>
     <string name="action_night">夜间模式</string>
     <string name="action_text">无图模式</string>
-    <string name="action_clean">清空缓存</string>
+    <string name="action_clean">清空历史</string>
     <string name="action_update">检查更新</string>
     <string name="action_add_tag">添加</string>
 

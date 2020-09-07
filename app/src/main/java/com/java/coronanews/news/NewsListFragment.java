@@ -22,13 +22,6 @@ import com.java.coronanews.data.NewsItem;
 
 import java.util.List;
 
-/**
- * 新闻列表，带分类
- * Created by equation on 9/7/17.
- * A simple {@link Fragment} subclass.
- * Use the {@link NewsListFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 
 public class NewsListFragment extends Fragment implements NewsListContract.View {
 

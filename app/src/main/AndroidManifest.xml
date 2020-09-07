@@ -5,13 +5,6 @@
     <!-- 应用appId微信：wx671e6c77306f9200 -->
     <!-- 应用secret微信：b642b5569b52657159af56082f930651 -->
     <!-- 应用签名微博：11b6221bfaf2a0c58cd9aea8d2d2487b -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
@@ -27,19 +20,22 @@
             android:theme="@style/AppFullScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".main.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -49,49 +45,18 @@
             android:label="@string/title_activity_news_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
-<!--        &lt;!&ndash; 分享相关设置 &ndash;&gt;-->
-<!--        <meta-data-->
-<!--            android:name="tencent_qq_appid"-->
-<!--            android:value="@string/tencent_qq_appid" />-->
-<!--        <meta-data-->
-<!--            android:name="weixin_key"-->
-<!--            android:value="@string/weixin_key" />-->
-<!--        <meta-data-->
-<!--            android:name="sina_weibo_redirecturi"-->
-<!--            android:value="@string/sina_weibo_redirecturi" />-->
-<!--        <meta-data-->
-<!--            android:name="sina_weibo_key"-->
-<!--            android:value="@string/sina_weibo_key" />-->
-<!--        &lt;!&ndash; 微信分享注册 &ndash;&gt;-->
-<!--        <activity-->
-<!--            android:name=".main.wxapi.WXEntryActivity"-->
-<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
-<!--            android:exported="true"-->
-<!--            android:screenOrientation="portrait"-->
-<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
-
-<!--        &lt;!&ndash; QQ SDK 需要註冊Activity &ndash;&gt;-->
-<!--        <activity-->
-<!--            android:name="com.tencent.connect.common.AssistActivity"-->
-<!--            android:configChanges="orientation|keyboardHidden"-->
-<!--            android:screenOrientation="behind"-->
-<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
-<!--        <activity-->
-<!--            android:name="com.tencent.tauth.AuthActivity"-->
-<!--            android:launchMode="singleTask"-->
-<!--            android:noHistory="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW" />-->
-
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.BROWSABLE" />-->
-
-<!--                <data android:scheme="tencent222222" />-->
-<!--                &lt;!&ndash; 100380359 100381104 222222 &ndash;&gt;-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
-<!--        &lt;!&ndash; QQ SDK 需要注册 Activity &ndash;&gt;-->
+        <activity
+            android:name=".info.InfoDetailActivity"
+            android:label="@string/title_activity_info_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 </manifest>

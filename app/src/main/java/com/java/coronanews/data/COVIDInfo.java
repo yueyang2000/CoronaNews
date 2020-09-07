@@ -4,21 +4,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 
-class Relationship{
-    public Relationship(){}
-    public static Relationship newInstance(){
-        return new Relationship();
-    }
-    public String relation;
-    public URL url;
-    public String label;
-    public boolean foward;
-}
+
 
 
 public class COVIDInfo {
@@ -26,45 +19,69 @@ public class COVIDInfo {
         property = new Property();
         relationships = new ArrayList<>();
     }
+    public String plain_json;
     public String hot;
     public String label;
     public URL url;
-    public URL image;
+    public String image;
 
     public String enwiiki;
     public String baidu;
     public String zhwiki;
 
-    public class Property{
-        public Property(){}
-        public String defination;
-        public String feature;
-        public String include;
-        public String condition;
-        public String transmit;
-        public String application;
+    public static class Relationship{
+        public Relationship(){}
+        public String relation;
+        public URL url;
+        public String label;
+        public boolean foward;
     }
-    Property property;
+    public class Property{
+        public Property(){
+            keys = new ArrayList<>();
+            values = new ArrayList<>();
+        }
+        public ArrayList<String> keys;
+        public ArrayList<String> values;
+    }
+    public Property property;
+    public ArrayList<Relationship> relationships;
 
-    ArrayList<Relationship> relationships;
+    public String GetDescription(){
+        if(!baidu.equals(""))
+            return baidu;
+        else if(!enwiiki.equals(""))
+            return enwiiki;
+        else if(!zhwiki.equals(""))
+            return zhwiki;
+        else
+            return "";
+    }
     public static COVIDInfo parseJSON(JSONObject json_info) throws IOException, JSONException {
         COVIDInfo result = new COVIDInfo();
+        result.plain_json = json_info.toString();
         result.hot = json_info.optString("hot");
         result.label = json_info.optString("label");
         result.url = new URL(json_info.optString("url"));
-        result.image = new URL(json_info.optString("img"));
+        String img = json_info.optString("img");
+        if(!img.equals("null"))
+            result.image = json_info.optString("img");
+
+        json_info = json_info.getJSONObject("abstractInfo");
         result.enwiiki = json_info.optString("enwiki");
         result.baidu = json_info.optString("baidu");
         result.zhwiki = json_info.optString("zhwiki");
         JSONObject _covid = json_info.getJSONObject("COVID");
         JSONObject _property = _covid.getJSONObject("properties");
-        result.property.defination = _property.optString("定义");
-        result.property.application = _property.optString("应用");
-        result.property.feature = _property.optString("特征");
-        result.property.include = _property.optString("包括");
-        result.property.condition = _property.optString("生存条件");
-        result.property.transmit = _property.optString("传播方式");
-        JSONArray _relationships = _covid.getJSONArray("relationships");
+
+        for (Iterator<String> it = _property.keys(); it.hasNext(); ) {
+            String key = it.next();
+            String value = _property.optString(key);
+            result.property.values.add(value);
+            result.property.keys.add(key);
+        }
+
+        JSONArray _relationships = _covid.getJSONArray("relations");
         for(int i = 0; i<_relationships.length(); i++)
         {
             Relationship relationItem = new Relationship();

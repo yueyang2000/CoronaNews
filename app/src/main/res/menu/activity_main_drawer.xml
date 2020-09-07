@@ -8,12 +8,16 @@
             android:title="@string/nav_news_title" />
         <item
             android:id="@+id/nav_history"
-            android:icon="@drawable/ic_favorite"
+            android:icon="@drawable/ic_news"
             android:title="@string/nav_history_title" />
         <item
             android:id="@+id/nav_data"
-            android:icon="@drawable/ic_settings"
+            android:icon="@drawable/ic_news"
             android:title="@string/nav_data_title" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_news"
+            android:title="@string/nav_info_title" />
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_about"

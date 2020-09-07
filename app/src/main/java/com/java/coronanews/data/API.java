@@ -42,6 +42,41 @@ class API {
         return NewsItem.parseJSON(json_news);
     }
 
+
+    public static List<COVIDInfo> GetCOVIDInfo(final String entity) throws IOException, JSONException{
+        String URL_String = new String(String.format("https://innovaapi.aminer.cn/covid/api/v1/pneumonia/entityquery?entity=%s", entity));
+        String body = GetBodyFromURL(URL_String,false);
+        if(body.equals("")) {
+            Log.d("warning","No body found.");
+            return new ArrayList<COVIDInfo>();
+        }
+        List<COVIDInfo> result = new ArrayList<>();
+        JSONObject allData = new JSONObject(body);
+        if(!allData.optString("msg").equals("success"))
+            return new ArrayList<COVIDInfo>();
+        JSONArray list = allData.getJSONArray("data");
+        for (int t = 0; t < list.length(); t++) {
+            JSONObject json_news = list.getJSONObject(t);
+            result.add(COVIDInfo.parseJSON(json_news));
+        }
+        return result;
+    }
+
+    public static List<COVIDInfo> GetRelatedInfo(List<String> name)  throws IOException, JSONException{
+        List<COVIDInfo> result = new ArrayList<>();
+        for(int i = 0; i<name.size(); i++)
+        {
+            String entity = name.get(i);
+            String URL_String = new String(String.format("https://innovaapi.aminer.cn/covid/api/v1/pneumonia/entityquery?entity=%s", entity));
+            String body = GetBodyFromURL(URL_String,false);
+            JSONObject allData = new JSONObject(body);
+            JSONArray list = allData.getJSONArray("data");
+            JSONObject json_news = list.getJSONObject(0);
+            result.add(COVIDInfo.parseJSON(json_news));
+        }
+        return result;
+    }
+
     /**
      * @param url 网页地址
      * @return 网页内容
