@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 
+import org.json.JSONObject;
 import org.reactivestreams.Publisher;
 
 import java.io.IOException;
@@ -98,6 +99,20 @@ public class Manager {
             }
         }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
+
+    public Single<JSONObject> fetchData() {
+        return Single.fromCallable(new Callable<JSONObject>() {
+            @Override
+            public JSONObject call() throws Exception {
+                try {
+                    return API.GetEpidemicData();
+                } catch(Exception e) {
+                    return new JSONObject();
+                }
+            }
+        }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+    }
+
 
     public void touchRead(final NewsItem news) {
         Single.fromCallable(new Callable<Object>() {

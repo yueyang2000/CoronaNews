@@ -56,7 +56,7 @@ public class NewsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mCategories.clear();
         //mCategories = Manager.I.getConfig().availableCategories(true);
         mCategories.add("News");
         mCategories.add("Paper");

@@ -10,9 +10,6 @@ import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
 // import com.java.coronanews.news.newsdetail.NewsDetailActivity;
 
-/**
- * Created by chenyu on 2017/9/7.
- */
 
 public class NewsListPresenter implements NewsListContract.Presenter {
 

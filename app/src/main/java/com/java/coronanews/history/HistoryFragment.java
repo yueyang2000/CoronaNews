@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.core.app.ActivityOptionsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -61,14 +60,16 @@ public class HistoryFragment extends Fragment implements HistoryContract.View {
         mAdapter.setFooterVisible(false);
         mAdapter.setOnItemClickListener((View itemView, int position) -> {
             NewsItem news = mAdapter.getNews(position);
-            View transitionView = itemView.findViewById(R.id.image_view);
+//            View transitionView = itemView.findViewById(R.id.image_view);
             this.mLastClickPosition = position;
-
+/*
             ActivityOptionsCompat options =
                     ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
                             transitionView, getString(R.string.transition_news_img));
 
-            this.mPresenter.openNewsDetailUI(news, options.toBundle());
+
+ */
+            this.mPresenter.openNewsDetailUI(news, new Bundle());
         });
 
         mPresenter = new HistoryPresenter(this);
@@ -79,7 +80,7 @@ public class HistoryFragment extends Fragment implements HistoryContract.View {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_favorites, container, false);
+        View view = inflater.inflate(R.layout.fragment_history, container, false);
 
         mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycle_view);

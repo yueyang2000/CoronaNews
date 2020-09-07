@@ -17,10 +17,16 @@ public interface MainContract {
          */
         void switchToNews();
 
+        void switchToChart();
         /**
          * 切换到关于页面
          */
         void switchToAbout();
+
+        /**
+         * 切换到history页面
+         */
+        void switchToHistory ();
     }
 
     interface Presenter extends BasePresenter {

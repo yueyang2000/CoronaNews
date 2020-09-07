@@ -5,9 +5,7 @@ import android.os.Bundle;
 
 import com.java.coronanews.data.Manager;
 import com.java.coronanews.data.NewsItem;
-import com.java.coronanews.data.NewsItem;
 import com.java.coronanews.news.NewsDetailActivity;
-
 import java.util.List;
 
 import io.reactivex.functions.Consumer;

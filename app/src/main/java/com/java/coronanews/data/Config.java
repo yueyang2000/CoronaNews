@@ -9,10 +9,13 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.concurrent.Callable;
-
+import java.util.HashMap;
 import io.reactivex.Scheduler;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
@@ -25,6 +28,7 @@ import io.reactivex.schedulers.Schedulers;
 public class Config {
     public static String []categorys = {"news", "paper"};
     public static int category_cnt = 2;
+
 
     public static class Category {
         public String title;

@@ -3,6 +3,7 @@ package com.java.coronanews.data;
 import android.app.Activity;
 import android.util.Log;
 
+import com.java.coronanews.history.HistoryFragment;
 import com.xyzlf.share.library.bean.ShareEntity;
 import com.xyzlf.share.library.interfaces.ShareConstant;
 import com.xyzlf.share.library.util.ShareUtil;
@@ -45,11 +46,20 @@ class API {
      * @param url 网页地址
      * @return 网页内容
      */
-    static String GetBodyFromURL(String url) throws IOException {
+    static String GetBodyFromURL(String url, boolean getdata) throws IOException {
         URL cs = new URL(url);
-        URLConnection urlConn = cs.openConnection();
-        urlConn.setConnectTimeout(10 * 1000);
-        BufferedReader in = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
+        BufferedReader in = null;
+        if(!getdata){
+            URLConnection urlConn = cs.openConnection();
+            urlConn.setConnectTimeout(10 * 1000);
+            in = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
+        }
+        else{
+            HttpURLConnection urlConn = (HttpURLConnection)cs.openConnection();
+            //urlConn.setConnectTimeout(10 * 1000);
+            urlConn.setRequestMethod("GET");
+            in = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
+        }
         String inputLine, body = "";
         while ((inputLine = in.readLine()) != null)
             body = body + inputLine;
@@ -86,7 +96,7 @@ class API {
 
     public static List<NewsItem> GetNews(final int pageNo, final int pageSize, final int categiory) throws IOException, JSONException {
         String URL_String = new String(String.format("https://covid-dashboard.aminer.cn/api/events/list?type=%s&page=%d&size=%d", Config.categorys[categiory], pageNo, pageSize));
-        String body = GetBodyFromURL(URL_String);
+        String body = GetBodyFromURL(URL_String,false);
         if(body.equals("")) {
             Log.d("warning","No body found.");
             return new ArrayList<NewsItem>();
@@ -99,6 +109,19 @@ class API {
             result.add(GetNewsFromJson(json_news));
         }
         return result;
+    }
+    /**
+     * 获得疫情数据内容
+     */
+    public static JSONObject GetEpidemicData() throws IOException, JSONException{
+        String URL_String = "https://covid-dashboard.aminer.cn/api/dist/epidemic.json";
+        String body = GetBodyFromURL(URL_String, true);
+
+        if(body.equals("")) {
+            Log.d("warning","No body found.");
+            return new JSONObject();
+        }
+        return new JSONObject(body); //直接返回json文件，存储在config里
     }
 
     /**

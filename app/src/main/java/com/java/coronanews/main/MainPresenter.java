@@ -1,6 +1,16 @@
 package com.java.coronanews.main;
 
 import com.java.coronanews.R;
+import com.java.coronanews.data.Manager;
+import com.java.coronanews.data.Config;
+import com.java.coronanews.data.NewsItem;
+
+import org.json.JSONObject;
+
+import java.util.List;
+
+import io.reactivex.Single;
+import io.reactivex.functions.Consumer;
 //import com.java.coronanews.data.Config;
 //import com.java.coronanews.data.Manager;
 
@@ -16,11 +26,9 @@ public class MainPresenter implements MainContract.Presenter {
         this.mRestartByMode = restartByMode;
         view.setPresenter(this);
 
-        if (mRestartByMode) {
-            mCurrentNavigation = R.id.nav_settings;
-        } else {
-            mCurrentNavigation = R.id.nav_news;
-        }
+
+        mCurrentNavigation = R.id.nav_news;
+
     }
 
     public int getCurrentNavigation() {
@@ -44,12 +52,12 @@ public class MainPresenter implements MainContract.Presenter {
             case R.id.nav_news:
                 mMainView.switchToNews();
                 break;
-//            case R.id.nav_favorites:
-//                mMainView.switchToFavorites();
-//                break;
-//            case R.id.nav_settings:
-//                mMainView.switchToSettings();
-//                break;
+            case R.id.nav_history:
+                mMainView.switchToHistory();
+                break;
+            case R.id.nav_data:
+                mMainView.switchToChart();
+                break;
             case R.id.nav_about:
                 mMainView.switchToAbout();
                 break;

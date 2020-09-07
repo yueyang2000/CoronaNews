@@ -9,8 +9,8 @@
     <string name="search_not_found">找不到相关内容</string>
 
     <string name="nav_news_title">新闻</string>
-    <string name="nav_favorites_title">收藏</string>
-    <string name="nav_settings_title">设置</string>
+    <string name="nav_history_title">历史</string>
+    <string name="nav_data_title">疫情数据</string>
     <string name="nav_about_title">关于</string>
     <string name="action_favorite">收藏</string>
     <string name="action_unfavorite">取消收藏</string>
@@ -36,4 +36,8 @@
 
     <string name="error_tips">由于惨不忍睹的网络环境\n加载失败了！\n</string>
     <string name="reload_tips">点击重新加载</string>
+
+    <string name="data_country">选择国家/地区</string>
+    <string name="data_province">选择省份/城市</string>
+    <string name="data_type">选择数据类型</string>
 </resources>

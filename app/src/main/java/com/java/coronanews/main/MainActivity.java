@@ -4,10 +4,8 @@ import android.content.Intent;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SearchView;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
@@ -22,8 +20,9 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.java.coronanews.R;
 import com.java.coronanews.about.AboutFragment;
+import com.java.coronanews.chart.PaintChartFragment;
+import com.java.coronanews.history.HistoryFragment;
 import com.java.coronanews.news.NewsFragment;
-
 
 /**
  * Created by equation on 9/7/17.
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity
     private Toolbar mToolbar;
     private NavigationView mNavigationView;
     private MainContract.Presenter mPresenter;
-    private Fragment mNews, mFavorites, mSettings, mAbout;
+    private Fragment mNews, mHistory, mChart, mAbout;
     private MenuItem mSearchItem;
     private SearchView mSearchView;
     private String mKeyword = "";
@@ -99,11 +98,11 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public boolean onQueryTextSubmit(String query) {
-//                mKeyword = query;
-//                System.out.println(mPresenter.getCurrentNavigation() + "  " + R.id.nav_news);
-//                if (mPresenter.getCurrentNavigation() == R.id.nav_news && mNews != null)
-//                    ((NewsFragment) mNews).setKeyword(query);
-//                mSearchView.clearFocus();
+                mKeyword = query;
+                System.out.println(mPresenter.getCurrentNavigation() + "  " + R.id.nav_news);
+                if (mPresenter.getCurrentNavigation() == R.id.nav_news && mNews != null)
+                    ((NewsFragment) mNews).setKeyword(query);
+                mSearchView.clearFocus();
                 return false;
             }
 
@@ -174,5 +173,20 @@ public class MainActivity extends AppCompatActivity
         if (mAbout == null)
             mAbout = new AboutFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mAbout).commit();
+    }
+
+    @Override
+    public void switchToChart() {
+        switchTo(R.id.nav_data, "绘图");
+        if (mChart == null)
+            mChart = PaintChartFragment.newInstance();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mChart).commit();
+    }
+
+    public void switchToHistory() {
+        switchTo(R.id.nav_history, "历史");
+        if (mHistory == null)
+            mHistory = HistoryFragment.newInstance();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mHistory).commit();
     }
 }
