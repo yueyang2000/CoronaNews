@@ -120,7 +120,6 @@ public class NewsDetailActivity extends AppCompatActivity {
         mContent.setText(content);
 
         mFab.setClickable(true);
-        findViewById(R.id.layout_error).setVisibility(View.INVISIBLE);
         findViewById(R.id.layout_content).setVisibility(View.VISIBLE);
 
     }

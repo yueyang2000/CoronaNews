@@ -13,7 +13,7 @@ public class Epidemic {
     public static TreeMap<String, TreeSet<String>> place_map = new TreeMap<>();
     public static TreeSet<String> countries = new TreeSet<>();
     public static String[] types = {"CONFIRMED","SUSPECTED","CURED","DEAD","SEVERE","RISK","inc24"};
-
+    public static boolean loaded =  false;
     public static ArrayList<String> getData(String country, String provience, int type) {
         ArrayList<String> answer = new ArrayList<>();
         String key = (provience=="all")? country: country+"|"+provience;

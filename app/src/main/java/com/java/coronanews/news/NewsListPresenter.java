@@ -88,30 +88,32 @@ public class NewsListPresenter implements NewsListContract.Presenter {
         mLastFetchStart = start;
         Single<List<NewsItem>> single = null;
 
-        single = Manager.I.fetchNews(mPageNo, PAGE_SIZE, mCategory);
-
-        single.subscribe(new Consumer<List<NewsItem>>() {
-            @Override
-            public void accept(List<NewsItem> simpleNewses) throws Exception {
-                System.out.println(System.currentTimeMillis() - start + " | " + mCategory + " | " + simpleNewses.size() + " | " + mPageNo);
-                if (start != mLastFetchStart) return;
-
-                mLoading = false;
-
-                if (mKeyword.trim().length() != 0) {
-                    mView.onSuccess(simpleNewses.size() == 0);
-                    if (simpleNewses.size() == 1 && simpleNewses.get(0) == NewsItem.NULL) {
-                        simpleNewses.clear();
+        if(mKeyword.trim().length() != 0){
+            single = Manager.I.fetchNews(mPageNo, 20, mCategory, mKeyword);
+            single.subscribe(new Consumer<List<NewsItem>>() {
+                @Override
+                public void accept(List<NewsItem> newsItems) throws Exception {
+                    mView.onSuccess(true);
+                    mLoading = false;
+                    if(mPageNo == 1){
+                        mView.setNewsList(newsItems);
+                    }
+                    else{
+                        mView.appendNewsList(newsItems);
+                    }
+                    if(mPageNo == 1 && newsItems.size()<6){
                         requireMoreNews();
                     }
-
-                    // TODO onError
-                    if (mPageNo == 1) mView.setNewsList(simpleNewses);
-                    else mView.appendNewsList(simpleNewses);
-
-                    if (mPageNo == 1 && simpleNewses.size() > 0 && simpleNewses.size() < 10)
-                        requireMoreNews();
-                } else {
+                }
+            });
+        }
+        else{
+            single = Manager.I.fetchNews(mPageNo, PAGE_SIZE, mCategory, "");
+            single.subscribe(new Consumer<List<NewsItem>>() {
+                @Override
+                public void accept(List<NewsItem> simpleNewses) throws Exception {
+                    if (start != mLastFetchStart) return;
+                    mLoading = false;
                     if (mPageNo > 1) {
                         mView.onSuccess(true);
                         mView.appendNewsList(simpleNewses);
@@ -120,10 +122,7 @@ public class NewsListPresenter implements NewsListContract.Presenter {
                         mView.setNewsList(simpleNewses);
                     }
                 }
-
-
-            }
-        });
-
+            });
+        }
     }
 }

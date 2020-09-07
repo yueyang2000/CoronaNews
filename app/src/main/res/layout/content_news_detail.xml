@@ -62,42 +62,6 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/layout_error"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:visibility="invisible">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:paddingLeft="72dp"
-                android:paddingRight="72dp"
-                android:paddingTop="72dp"
-                app:srcCompat="@mipmap/error" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="false"
-                android:text="@string/error_tips"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:gravity="center_horizontal" />
-
-            <Button
-                android:id="@+id/button_reload"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/reload_tips" />
-
-        </LinearLayout>
 
     </FrameLayout>
 </androidx.core.widget.NestedScrollView>

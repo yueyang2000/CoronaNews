@@ -76,7 +76,7 @@ public class Manager {
     }
 
 
-    public Single<List<NewsItem>> fetchNews(final int pageNo, final int pageSize, final int category) {
+    public Single<List<NewsItem>> fetchNews(final int pageNo, final int pageSize, final int category, String keyword) {
         return Flowable.fromCallable(new Callable<List<NewsItem>>() {
             @Override
             public List<NewsItem> call() throws Exception {
@@ -97,8 +97,20 @@ public class Manager {
                 news.has_read = fs.hasRead(news._id);
                 return news;
             }
+        }).filter(new Predicate<NewsItem>() {
+            @Override
+            public boolean test(NewsItem newsItem) throws Exception {
+                if(keyword.equals("")){
+                    return true;
+                }
+                else{
+                    return newsItem.title.contains(keyword);
+                }
+            }
         }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
+
+
 
     public Single<JSONObject> fetchData() {
         return Single.fromCallable(new Callable<JSONObject>() {

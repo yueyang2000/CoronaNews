@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,12 +35,25 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.java.coronanews.R;
 import com.java.coronanews.data.Config;
 import com.java.coronanews.data.Epidemic;
+import com.java.coronanews.data.Manager;
+import com.java.coronanews.main.MainActivity;
+import com.java.coronanews.main.SplashActivity;
 
+import org.json.JSONObject;
+
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Comparator;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
+
+import io.reactivex.Single;
+import io.reactivex.functions.Consumer;
 
 
 /**
@@ -52,13 +66,14 @@ import java.util.TreeSet;
 public class PaintChartFragment extends Fragment {
     private Spinner mProvinceSpinner;
     private Spinner mCountrySpinner;
-    private Spinner getTypeSpinner;
-    private Button mButton;
     private Spinner mTypeSpinner;
+    private ProgressBar mProgrossBar;
+    private View content;
+    private Button mButton;
     private String country = "";
     private String province = "";
     private int type = -1;
-
+    private View view;
     private LineChart lineChart;
     private TextView graphTextView;
 
@@ -93,17 +108,57 @@ public class PaintChartFragment extends Fragment {
         theme.resolveAttribute(R.attr.colorPrimary, colorPrimary, true);
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.data_chart, container, false);
+        view = inflater.inflate(R.layout.data_chart, container, false);
 
 
         mCountrySpinner = view.findViewById(R.id.data_country);
         mProvinceSpinner = view.findViewById(R.id.data_province);
+        mTypeSpinner = view.findViewById(R.id.data_type);
+        mProgrossBar = view.findViewById(R.id.progress_bar);
         lineChart = view.findViewById(R.id.lineChart);
+        content = view.findViewById(R.id.content);
+        mProgrossBar.setVisibility(View.VISIBLE);
+        content.setVisibility(View.INVISIBLE);
 
 
 
+        loadData();
+        return view;
+    }
+    private void loadData(){
+        if(!Epidemic.loaded){
+            Single<JSONObject> single = null;
+            single = Manager.I.fetchData();
+            single.subscribe(new Consumer<JSONObject>() {
+                @Override
+                public void accept(JSONObject simpleNewses) throws Exception {
+                    Epidemic.loaded = true;
+                    Epidemic.data = simpleNewses;
+                    System.out.println("download epidemic data");
+                    for (Iterator<String> it = simpleNewses.keys(); it.hasNext(); ) {
+                        String key = it.next();
+                        String[] places = key.split("\\|");
 
+                        String country = places[0];
+                        String province = (places.length<2) ? "all": places[1];
+                        Epidemic.countries.add(country);
+                        TreeSet<String> map = Epidemic.place_map.get(country);
+                        if(map == null) map = new TreeSet<>();
+                        map.add(province);
+                        Epidemic.place_map.put(country, map);
+                    }
+                    loadFinish();
+                }
+            });
+        }
+        else{
+            loadFinish();
+        }
 
+    }
+    private void loadFinish(){
+        mProgrossBar.setVisibility(View.INVISIBLE);
+        content.setVisibility(View.VISIBLE);
         ArrayAdapter<String> countryApatper = new ArrayAdapter<String>(this.getActivity(),
                 android.R.layout.simple_list_item_1,  Epidemic.countries.toArray(new String[Epidemic.countries.size()]));
         mCountrySpinner.setAdapter(countryApatper);
@@ -142,7 +197,7 @@ public class PaintChartFragment extends Fragment {
 
             }
         });
-        mTypeSpinner = view.findViewById(R.id.data_type);
+
         ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(this.getActivity(),
                 android.R.layout.simple_list_item_1, Epidemic.types);
         mTypeSpinner.setAdapter(typeAdapter);
@@ -166,8 +221,6 @@ public class PaintChartFragment extends Fragment {
                 }
             }
         });
-
-        return view;
     }
     private void drawChart() {
         ArrayList<String> dataList = Epidemic.getData(country, province, type);
@@ -175,8 +228,17 @@ public class PaintChartFragment extends Fragment {
 
         lineChart.setVisibility(View.VISIBLE);
         String begin = Epidemic.getDate(country, province, type);
-        List<Entry> entries = new ArrayList<>();
+        SimpleDateFormat sdf = sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date;
+        try{
+            date = sdf.parse(begin);
+        }
+        catch(Exception e){
+            return;
+        }
 
+
+        List<Entry> entries = new ArrayList<>();
         for (int i = 0; i < dataList.size(); i++) {
                 String tmp = dataList.get(i);
                 if(tmp != "null") {
@@ -222,21 +284,22 @@ public class PaintChartFragment extends Fragment {
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);//设置x轴的显示位置
         xAxis.setGranularity(1f);//禁止放大后x轴标签重绘
 
-//        xAxis.setValueFormatter(new IAxisValueFormatter() {
-//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd");
-//
-//            @Override
-//            public String getFormattedValue(float value, AxisBase axis) {
-//                int tmpValue = (int) value;
-//                if (tmpValue < 0) {
-//                    tmpValue = 0;
-//                }
-//                if (tmpValue >= dateArrayList.size()) {
-//                    tmpValue = dateArrayList.size() - 1;
-//                }
-//                return simpleDateFormat.format(dateArrayList.get(tmpValue));
-//            }
-//        });
+        Calendar calendar = new GregorianCalendar();
+
+        xAxis.setValueFormatter(new IAxisValueFormatter() {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd");
+
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                int val = (int) value;
+                if (val < 0) {
+                    val = 0;
+                }
+                calendar.setTime(date);
+                calendar.add(Calendar.DATE, val);
+                return simpleDateFormat.format(calendar.getTime());
+            }
+        });
 
         //透明化图例
         Legend legend = lineChart.getLegend();
@@ -254,5 +317,4 @@ public class PaintChartFragment extends Fragment {
         lineChart.invalidate(); // refresh
 
     }
-
 }

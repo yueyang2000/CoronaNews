@@ -50,31 +50,9 @@ public class SplashActivity extends AppCompatActivity {
 //                        SplashActivity.this.finish();
 //                    }
 //                });
-        Single<JSONObject> single = null;
-        single = Manager.I.fetchData();
-        single.subscribe(new Consumer<JSONObject>() {
-            @Override
-            public void accept(JSONObject simpleNewses) throws Exception {
-                Epidemic.data = simpleNewses;
-                System.out.println("download epidemic data");
-                for (Iterator<String> it = simpleNewses.keys(); it.hasNext(); ) {
-                    String key = it.next();
-                    String[] places = key.split("\\|");
-
-                    String country = places[0];
-                    String province = (places.length<2) ? "all": places[1];
-                    Epidemic.countries.add(country);
-                    TreeSet<String> map = Epidemic.place_map.get(country);
-                    if(map == null) map = new TreeSet<>();
-                    map.add(province);
-                    Epidemic.place_map.put(country, map);
-                }
-
-                Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
-                SplashActivity.this.startActivity(mainIntent);
-                SplashActivity.this.finish();
-            }
-        });
+        Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
+        SplashActivity.this.startActivity(mainIntent);
+        SplashActivity.this.finish();
 
     }
 }
