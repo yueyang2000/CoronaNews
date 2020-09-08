@@ -1,4 +1,4 @@
-package com.java.coronanews.scolar;
+package com.java.coronanews.scholar;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.java.coronanews.R;
-import com.java.coronanews.data.NewsItem;
 import com.java.coronanews.data.Scholar;
 
 import java.util.List;

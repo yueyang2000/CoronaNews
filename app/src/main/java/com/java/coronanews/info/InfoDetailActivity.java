@@ -69,6 +69,12 @@ public class InfoDetailActivity extends AppCompatActivity {
         mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         mCollapsingToolbarLayout.setTitle(entity);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         mImage = (ImageView) findViewById(R.id.image_view);
         mProgressBar = (ProgressBar)findViewById(R.id.progress_bar);
@@ -91,7 +97,15 @@ public class InfoDetailActivity extends AppCompatActivity {
         });
 
     }
-
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(menuItem);
+        }
+    }
     public void loadFinish(){
         TextView abstractInfo = findViewById(R.id.text_abstractInfo);
         abstractInfo.setText(mInfo.GetDescription());

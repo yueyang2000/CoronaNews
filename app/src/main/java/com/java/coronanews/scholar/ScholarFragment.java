@@ -1,4 +1,4 @@
-package com.java.coronanews.scolar;
+package com.java.coronanews.scholar;
 
 import android.os.Bundle;
 import android.os.Parcelable;

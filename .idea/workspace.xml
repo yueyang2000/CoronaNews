@@ -7,15 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a127711-9eb3-4008-8671-b7bd880009f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Scholar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarDetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarListContract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarListFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarListPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_scholar_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_scholar_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_scholar_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_scholar_detail.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -28,12 +21,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/API.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Scholar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Scholar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarDetailActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,38 +216,38 @@
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state width="484" height="466" key="DebuggerActiveHint/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599361521385" />
-    <state width="2006" height="313" key="GridCell.Tab.0.bottom" timestamp="1599533154962">
+    <state width="2006" height="313" key="GridCell.Tab.0.bottom" timestamp="1599535429688">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599533154962" />
-    <state width="2006" height="313" key="GridCell.Tab.0.center" timestamp="1599533154961">
+    <state width="2006" height="313" key="GridCell.Tab.0.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599535429688" />
+    <state width="2006" height="313" key="GridCell.Tab.0.center" timestamp="1599535429687">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599533154961" />
-    <state width="2006" height="313" key="GridCell.Tab.0.left" timestamp="1599533154961">
+    <state width="2006" height="313" key="GridCell.Tab.0.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599535429687" />
+    <state width="2006" height="313" key="GridCell.Tab.0.left" timestamp="1599535429687">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599533154961" />
-    <state width="2006" height="313" key="GridCell.Tab.0.right" timestamp="1599533154962">
+    <state width="2006" height="313" key="GridCell.Tab.0.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599535429687" />
+    <state width="2006" height="313" key="GridCell.Tab.0.right" timestamp="1599535429688">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599533154962" />
-    <state width="2006" height="314" key="GridCell.Tab.1.bottom" timestamp="1599532765314">
+    <state width="2006" height="313" key="GridCell.Tab.0.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599535429688" />
+    <state width="2006" height="314" key="GridCell.Tab.1.bottom" timestamp="1599535343346">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="314" key="GridCell.Tab.1.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599532765314" />
-    <state width="2006" height="314" key="GridCell.Tab.1.center" timestamp="1599532765313">
+    <state width="2006" height="314" key="GridCell.Tab.1.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599535343346" />
+    <state width="2006" height="314" key="GridCell.Tab.1.center" timestamp="1599535343345">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="314" key="GridCell.Tab.1.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599532765313" />
-    <state width="2006" height="314" key="GridCell.Tab.1.left" timestamp="1599532765313">
+    <state width="2006" height="314" key="GridCell.Tab.1.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599535343345" />
+    <state width="2006" height="314" key="GridCell.Tab.1.left" timestamp="1599535343345">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="314" key="GridCell.Tab.1.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599532765313" />
-    <state width="2006" height="314" key="GridCell.Tab.1.right" timestamp="1599532765314">
+    <state width="2006" height="314" key="GridCell.Tab.1.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599535343345" />
+    <state width="2006" height="314" key="GridCell.Tab.1.right" timestamp="1599535343346">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="314" key="GridCell.Tab.1.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599532765314" />
+    <state width="2006" height="314" key="GridCell.Tab.1.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599535343346" />
     <state width="1024" height="564" key="XDebugger.FullValuePopup" timestamp="1599476096622">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
@@ -279,9 +270,14 @@
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarListPresenter.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="86" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar/ScholarDetailActivity.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoDetailActivity.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

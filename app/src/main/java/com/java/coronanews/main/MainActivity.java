@@ -21,11 +21,10 @@ import android.view.inputmethod.InputMethodManager;
 import com.java.coronanews.R;
 import com.java.coronanews.about.AboutFragment;
 import com.java.coronanews.chart.PaintChartFragment;
-import com.java.coronanews.data.Scholar;
 import com.java.coronanews.history.HistoryFragment;
 import com.java.coronanews.news.NewsFragment;
 import com.java.coronanews.info.InfoFragment;
-import com.java.coronanews.scolar.ScholarFragment;
+import com.java.coronanews.scholar.ScholarFragment;
 
 /**
  * Created by equation on 9/7/17.

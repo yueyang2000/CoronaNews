@@ -1,16 +1,13 @@
-package com.java.coronanews.scolar;
+package com.java.coronanews.scholar;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.java.coronanews.BasePresenter;
 import com.java.coronanews.data.Manager;
-import com.java.coronanews.data.NewsItem;
 import com.java.coronanews.data.Scholar;
 
 import java.util.List;
 
-import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
 // import com.java.coronanews.news.newsdetail.NewsDetailActivity;
 

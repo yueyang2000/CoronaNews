@@ -1,10 +1,9 @@
-package com.java.coronanews.scolar;
+package com.java.coronanews.scholar;
 
 import android.os.Bundle;
 
 import com.java.coronanews.BasePresenter;
 import com.java.coronanews.BaseView;
-import com.java.coronanews.data.NewsItem;
 import com.java.coronanews.data.Scholar;
 
 import java.util.List;

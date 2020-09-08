@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">CoronaNews</string>
     <string name="title_activity_news_detail">NewsDetailActivity</string>
-    <string name="title_activity_info_detail">NewsInfoActivity</string>
-    <string name="title_activity_wxentry">WXEntryActivit</string>
+    <string name="title_activity_info_detail">InfoDetailActivity</string>
+    <string name="title_activity_scholar_detail">ScholarDetailActivity</string>
+    <string name="title_activity_wxentry">WXEntryActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
