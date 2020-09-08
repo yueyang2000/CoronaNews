@@ -21,7 +21,7 @@ public interface MainContract {
         /**
          * 切换到关于页面
          */
-        void switchToAbout();
+        void switchToSetting();
 
         /**
          * 切换到history页面

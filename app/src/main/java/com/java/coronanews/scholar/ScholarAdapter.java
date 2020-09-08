@@ -37,6 +37,7 @@ public class ScholarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void setData(List<Scholar> data) {
         mData = new ArrayList<Scholar>(data);
         this.notifyDataSetChanged();
+        setFooterVisible(false);
     }
 
     public void appendData(List<Scholar> data) {

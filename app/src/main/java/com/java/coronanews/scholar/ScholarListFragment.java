@@ -139,6 +139,7 @@ public class ScholarListFragment extends Fragment implements ScholarListContract
     @Override
     public void setScholar(List<Scholar> list) {
         mAdapter.setData(list);
+
         //mTextEmpty.setVisibility(mAdapter.getItemCount() == 0 ? View.VISIBLE : View.GONE);
     }
 
@@ -146,7 +147,7 @@ public class ScholarListFragment extends Fragment implements ScholarListContract
 
     @Override
     public void onSuccess(boolean loadCompleted) {
-        //mAdapter.setFooterVisible(!loadCompleted);
+        mAdapter.setFooterVisible(!loadCompleted);
         mSwipeRefreshWidget.setRefreshing(false);
     }
 

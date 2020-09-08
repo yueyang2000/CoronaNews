@@ -14,7 +14,7 @@
     <string name="nav_history_title">历史</string>
     <string name="nav_data_title">疫情数据</string>
     <string name="nav_info_title">疫情图谱</string>
-    <string name="nav_about_title">关于</string>
+    <string name="nav_setting_title">设置</string>
     <string name="nav_scholar_title">知疫学者</string>
     <string name="action_favorite">收藏</string>
     <string name="action_unfavorite">取消收藏</string>
@@ -22,13 +22,13 @@
     <string name="action_stop_speech">停止朗读</string>
     <string name="action_share">分享</string>
 
-    <string name="setting_view">外观</string>
+    <string name="setting_view">标签</string>
     <string name="setting_other">其他</string>
     <string name="setting_tags">首页标签</string>
     <string name="setting_blacklist">关键词屏蔽</string>
     <string name="about_us">关于我们</string>
-    <string name="action_night">夜间模式</string>
-    <string name="action_text">无图模式</string>
+    <string name="action_paper">论文标签</string>
+    <string name="action_news">新闻标签</string>
     <string name="action_clean">清空历史</string>
     <string name="action_update">检查更新</string>
     <string name="action_add_tag">添加</string>

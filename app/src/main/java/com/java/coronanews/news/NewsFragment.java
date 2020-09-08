@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.java.coronanews.R;
+import com.java.coronanews.data.Config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,9 +58,11 @@ public class NewsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mCategories.clear();
-        //mCategories = Manager.I.getConfig().availableCategories(true);
-        mCategories.add("News");
-        mCategories.add("Paper");
+        List<String> available = Config.availableList();
+        for(int i = 0; i<available.size(); i++)
+        {
+            mCategories.add(available.get(i));
+        }
         mPagerAdapter = new MyPagerAdapter(getChildFragmentManager(), mCategories);
     }
 

@@ -61,8 +61,8 @@ public class MainPresenter implements MainContract.Presenter {
             case R.id.nav_info:
                 mMainView.switchToInfo();
                 break;
-            case R.id.nav_about:
-                mMainView.switchToAbout();
+            case R.id.nav_setting:
+                mMainView.switchToSetting();
                 break;
             case R.id.nav_scholar:
                 mMainView.switchToScholar();

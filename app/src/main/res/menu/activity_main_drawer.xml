@@ -25,9 +25,9 @@
             android:title="@string/nav_scholar_title" />
 
         <item
-            android:id="@+id/nav_about"
+            android:id="@+id/nav_setting"
             android:icon="@drawable/ic_about"
-            android:title="@string/nav_about_title" />
+            android:title="@string/nav_setting_title" />
     </group>
 
 </menu>

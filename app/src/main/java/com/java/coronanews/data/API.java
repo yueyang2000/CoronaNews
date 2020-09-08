@@ -143,7 +143,8 @@ class API {
     }
 
     public static List<NewsItem> GetNews(final int pageNo, final int pageSize, final int categiory) throws IOException, JSONException {
-        String URL_String = new String(String.format("https://covid-dashboard.aminer.cn/api/events/list?type=%s&page=%d&size=%d", Config.categorys[categiory], pageNo, pageSize));
+        List<String> available = Config.availableList();
+        String URL_String = new String(String.format("https://covid-dashboard.aminer.cn/api/events/list?type=%s&page=%d&size=%d", available.get(categiory), pageNo, pageSize));
         String body = GetBodyFromURL(URL_String,false);
         if(body.equals("")) {
             Log.d("warning","No body found.");

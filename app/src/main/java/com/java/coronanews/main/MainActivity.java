@@ -19,7 +19,7 @@ import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 
 import com.java.coronanews.R;
-import com.java.coronanews.about.AboutFragment;
+import com.java.coronanews.settings.SettingsFragment;
 import com.java.coronanews.chart.PaintChartFragment;
 import com.java.coronanews.history.HistoryFragment;
 import com.java.coronanews.news.NewsFragment;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity
     private Toolbar mToolbar;
     private NavigationView mNavigationView;
     private MainContract.Presenter mPresenter;
-    private Fragment mNews, mHistory, mChart, mAbout, mInfo, mScholar;
+    private Fragment mNews, mHistory, mChart, mSetting, mInfo, mScholar;
     private MenuItem mSearchItem;
     private SearchView mSearchView;
     private String mKeyword = "";
@@ -178,11 +178,11 @@ public class MainActivity extends AppCompatActivity
 
 
     @Override
-    public void switchToAbout() {
-        switchTo(R.id.nav_about, "关于");
-        if (mAbout == null)
-            mAbout = new AboutFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mAbout).commit();
+    public void switchToSetting() {
+        switchTo(R.id.nav_setting, "设置");
+        if (mSetting == null)
+            mSetting = new SettingsFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mSetting).commit();
     }
 
     @Override
