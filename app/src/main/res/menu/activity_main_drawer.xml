@@ -18,6 +18,12 @@
             android:id="@+id/nav_info"
             android:icon="@drawable/ic_news"
             android:title="@string/nav_info_title" />
+
+        <item
+            android:id="@+id/nav_scholar"
+            android:icon="@drawable/ic_news"
+            android:title="@string/nav_scholar_title" />
+
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_about"

@@ -21,9 +21,12 @@ import android.view.inputmethod.InputMethodManager;
 import com.java.coronanews.R;
 import com.java.coronanews.about.AboutFragment;
 import com.java.coronanews.chart.PaintChartFragment;
+import com.java.coronanews.data.Scholar;
 import com.java.coronanews.history.HistoryFragment;
 import com.java.coronanews.news.NewsFragment;
 import com.java.coronanews.info.InfoFragment;
+import com.java.coronanews.scolar.ScholarFragment;
+
 /**
  * Created by equation on 9/7/17.
  */
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity
     private Toolbar mToolbar;
     private NavigationView mNavigationView;
     private MainContract.Presenter mPresenter;
-    private Fragment mNews, mHistory, mChart, mAbout, mInfo;
+    private Fragment mNews, mHistory, mChart, mAbout, mInfo, mScholar;
     private MenuItem mSearchItem;
     private SearchView mSearchView;
     private String mKeyword = "";
@@ -205,6 +208,15 @@ public class MainActivity extends AppCompatActivity
             mInfo = InfoFragment.newInstance();
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mInfo).commit();
+    }
+
+    @Override
+    public void switchToScholar(){
+        switchTo(R.id.nav_scholar, "知疫学者");
+        if(mScholar == null){
+            mScholar = ScholarFragment.newInstance();
+        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mScholar).commit();
     }
 
 }

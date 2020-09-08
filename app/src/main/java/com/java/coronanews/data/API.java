@@ -56,26 +56,39 @@ class API {
             return new ArrayList<COVIDInfo>();
         JSONArray list = allData.getJSONArray("data");
         for (int t = 0; t < list.length(); t++) {
-            JSONObject json_news = list.getJSONObject(t);
-            result.add(COVIDInfo.parseJSON(json_news));
+            JSONObject json_info = list.getJSONObject(t);
+            result.add(COVIDInfo.parseJSON(json_info));
         }
         return result;
     }
 
-    public static List<COVIDInfo> GetRelatedInfo(List<String> name)  throws IOException, JSONException{
-        List<COVIDInfo> result = new ArrayList<>();
-        for(int i = 0; i<name.size(); i++)
-        {
-            String entity = name.get(i);
-            String URL_String = new String(String.format("https://innovaapi.aminer.cn/covid/api/v1/pneumonia/entityquery?entity=%s", entity));
-            String body = GetBodyFromURL(URL_String,false);
-            JSONObject allData = new JSONObject(body);
-            JSONArray list = allData.getJSONArray("data");
-            JSONObject json_news = list.getJSONObject(0);
-            result.add(COVIDInfo.parseJSON(json_news));
+    public static List<Scholar> GetScholar() throws IOException, JSONException{
+        String URL_String = new String("https://innovaapi.aminer.cn/predictor/api/v1/valhalla/highlight/get_ncov_expers_list?v=2");
+        String body = GetBodyFromURL(URL_String, false);
+        JSONObject obj = new JSONObject(body);
+        JSONArray arr = obj.getJSONArray("data");
+        ArrayList<Scholar> result = new ArrayList<>();
+        for(int i = 0; i < arr.length(); i++){
+            JSONObject json_scolar = arr.getJSONObject(i);
+            result.add(Scholar.parseJSON(json_scolar));
         }
         return result;
     }
+
+//    public static List<COVIDInfo> GetRelatedInfo(List<String> name)  throws IOException, JSONException{
+//        List<COVIDInfo> result = new ArrayList<>();
+//        for(int i = 0; i<name.size(); i++)
+//        {
+//            String entity = name.get(i);
+//            String URL_String = new String(String.format("https://innovaapi.aminer.cn/covid/api/v1/pneumonia/entityquery?entity=%s", entity));
+//            String body = GetBodyFromURL(URL_String,false);
+//            JSONObject allData = new JSONObject(body);
+//            JSONArray list = allData.getJSONArray("data");
+//            JSONObject json_news = list.getJSONObject(0);
+//            result.add(COVIDInfo.parseJSON(json_news));
+//        }
+//        return result;
+//    }
 
     /**
      * @param url 网页地址

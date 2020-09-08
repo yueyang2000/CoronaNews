@@ -29,6 +29,8 @@ public interface MainContract {
         void switchToHistory ();
 
         void switchToInfo();
+
+        void switchToScholar();
     }
 
     interface Presenter extends BasePresenter {

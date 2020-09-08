@@ -177,26 +177,55 @@ public class Manager {
     }
 
 
-    public Single<List<COVIDInfo>> fetchRelatedInfo(List<String>name)
-    {
-        return Flowable.fromCallable(new Callable<List<COVIDInfo>>() {
+//    public Single<List<COVIDInfo>> fetchRelatedInfo(List<String>name)
+//    {
+//        return Flowable.fromCallable(new Callable<List<COVIDInfo>>() {
+//            @Override
+//            public List<COVIDInfo> call() throws Exception{
+//                try{
+//                    return API.GetRelatedInfo(name);
+//                }
+//                catch(Exception e){
+//                    return new ArrayList<COVIDInfo>();
+//                }
+//            }
+//        }).flatMap(new Function<List<COVIDInfo>, Publisher<COVIDInfo>>() {
+//            @Override
+//            public Publisher<COVIDInfo> apply(@NonNull List<COVIDInfo> infos) throws Exception {
+//                return Flowable.fromIterable(infos);
+//            }
+//        }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+//    }
+
+
+    public Single<List<Scholar>> getScholar(int flag){
+        return Flowable.fromCallable(new Callable<List<Scholar>>() {
             @Override
-            public List<COVIDInfo> call() throws Exception{
+            public List<Scholar> call() throws Exception{
                 try{
-                    return API.GetRelatedInfo(name);
+                    return API.GetScholar();
                 }
                 catch(Exception e){
-                    return new ArrayList<COVIDInfo>();
+                    return new ArrayList<Scholar>();
                 }
             }
-        }).flatMap(new Function<List<COVIDInfo>, Publisher<COVIDInfo>>() {
+        }).flatMap(new Function<List<Scholar>, Publisher<Scholar>>() {
             @Override
-            public Publisher<COVIDInfo> apply(@NonNull List<COVIDInfo> infos) throws Exception {
-                return Flowable.fromIterable(infos);
+            public Publisher<Scholar> apply(@NonNull List<Scholar> scholars) throws Exception {
+                return Flowable.fromIterable(scholars);
+            }
+        }).filter(new Predicate<Scholar>() {
+            @Override
+            public boolean test(Scholar scholar) throws Exception {
+                if(flag == 0) {
+                    return true;
+                }
+                else{
+                    return scholar.is_passedaway;
+                }
             }
         }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
-
 
     /**
      * 清空数据库缓存
