@@ -22,11 +22,6 @@
         android:paddingStart="16dp"
         android:paddingTop="16dp">
 
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@+id/layout_content"
@@ -42,7 +37,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:text="简介"
+                android:text="指数"
                 android:textColor="@color/colorDetail"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -57,7 +52,7 @@
                 app:cardElevation="2dp">
 
                 <TextView
-                    android:id="@+id/text_abstractInfo"
+                    android:id="@+id/scholar_indices"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -75,7 +70,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:text="属性"
+                android:text="从属单位"
                 android:textColor="@color/colorDetail"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -89,7 +84,7 @@
                 app:cardElevation="2dp">
 
                 <TextView
-                    android:id="@+id/text_property"
+                    android:id="@+id/scholar_affiliation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -106,170 +101,120 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:text="相关词条"
+                android:text="个人简介"
                 android:textColor="@color/colorDetail"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/card1"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:stateListAnimator="@drawable/anim_item_news"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
                 app:cardCornerRadius="2dp"
-                app:cardElevation="2dp"
-                app:contentPadding="8dp">
-
+                app:cardElevation="2dp">
 
                 <TextView
-                    android:id="@+id/related1"
+                    android:id="@+id/scholar_bio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:lineSpacingMultiplier="1.2"
-                    android:lines="1"
-                    android:textColor="@color/colorTitle"
-                    android:textSize="20dp" />
+                    android:autoLink="web"
+                    android:gravity="start"
+                    android:padding="16dp"
+                    android:textColor="@color/colorText" />
 
             </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card2"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:stateListAnimator="@drawable/anim_item_news"
-                app:cardCornerRadius="2dp"
-                app:cardElevation="2dp"
-                app:contentPadding="8dp">
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="教育经历"
+                android:textColor="@color/colorDetail"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-
-                <TextView
-                    android:id="@+id/related2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:lineSpacingMultiplier="1.2"
-                    android:lines="1"
-                    android:textColor="@color/colorTitle"
-                    android:textSize="20dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card3"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:stateListAnimator="@drawable/anim_item_news"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
                 app:cardCornerRadius="2dp"
-                app:cardElevation="2dp"
-                app:contentPadding="8dp">
-
+                app:cardElevation="2dp">
 
                 <TextView
-                    android:id="@+id/related3"
+                    android:id="@+id/scholar_edu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:lineSpacingMultiplier="1.2"
-                    android:lines="1"
-                    android:textColor="@color/colorTitle"
-                    android:textSize="20dp" />
+                    android:autoLink="web"
+                    android:gravity="start"
+                    android:padding="16dp"
+                    android:textColor="@color/colorText" />
 
             </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card4"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:stateListAnimator="@drawable/anim_item_news"
-                app:cardCornerRadius="2dp"
-                app:cardElevation="2dp"
-                app:contentPadding="8dp">
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="工作经历"
+                android:textColor="@color/colorDetail"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-
-                <TextView
-                    android:id="@+id/related4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:lineSpacingMultiplier="1.2"
-                    android:lines="1"
-                    android:textColor="@color/colorTitle"
-                    android:textSize="20dp" />
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card5"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:stateListAnimator="@drawable/anim_item_news"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
                 app:cardCornerRadius="2dp"
-                app:cardElevation="2dp"
-                app:contentPadding="8dp">
-
+                app:cardElevation="2dp">
 
                 <TextView
-                    android:id="@+id/related5"
+                    android:id="@+id/scholar_work"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:lineSpacingMultiplier="1.2"
-                    android:lines="1"
-                    android:textColor="@color/colorTitle"
-                    android:textSize="20dp" />
+                    android:autoLink="web"
+                    android:gravity="start"
+                    android:padding="16dp"
+                    android:textColor="@color/colorText" />
 
             </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="标签"
+                android:textColor="@color/colorDetail"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp">
+
+                <TextView
+                    android:id="@+id/scholar_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="web"
+                    android:gravity="start"
+                    android:padding="16dp"
+                    android:textColor="@color/colorText" />
+
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
     </FrameLayout>

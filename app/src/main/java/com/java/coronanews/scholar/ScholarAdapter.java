@@ -86,8 +86,8 @@ public class ScholarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         if (holder instanceof ItemViewHolder) {
             Scholar scholar = mData.get(position);
             final ItemViewHolder item = (ItemViewHolder) holder;
-            item.mTitle.setText(scholar.name);
-//            item.mAuthor.setText(news.author.isEmpty() ? news.source : news.author);
+            item.mTitle.setText(scholar.getName());
+            item.mAuthor.setText(scholar.position);
 //            item.mDate.setText(news.time);
             item.setBackgroundColor(mContext.getResources().getColor(R.color.colorCard));
             item.mCurrentPosition = position;

@@ -27,6 +27,7 @@ import net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 
 public class ScholarDetailActivity extends AppCompatActivity {
@@ -63,7 +64,7 @@ public class ScholarDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scholar_detail);
 
         mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.scholar_collapsing_toolbar);
-        mCollapsingToolbarLayout.setTitle(mScholar.name);
+        mCollapsingToolbarLayout.setTitle(mScholar.getName());
         mError = false;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -78,9 +79,22 @@ public class ScholarDetailActivity extends AppCompatActivity {
 
         mImage = (ImageView) findViewById(R.id.image_view);
         ImageLoader.displayImage(mScholar.avatar, mImage);
-        //mFab.setClickable(true);
-        findViewById(R.id.layout_content).setVisibility(View.VISIBLE);
 
+        TextView indices, affiliation, bio, edu, work, field;
+        indices = findViewById(R.id.scholar_indices);
+        affiliation = findViewById(R.id.scholar_affiliation);
+        bio = findViewById(R.id.scholar_bio);
+        edu = findViewById(R.id.scholar_edu);
+        work = findViewById(R.id.scholar_work);
+        field = findViewById(R.id.scholar_field);
+        indices.setText(mScholar.indices);
+        affiliation.setText(mScholar.affiliation);
+        bio.setText(mScholar.bio);
+        edu.setText(mScholar.edu);
+        work.setText(mScholar.work);
+        field.setText(mScholar.field);
+
+        findViewById(R.id.layout_content).setVisibility(View.VISIBLE);
     }
 
 
