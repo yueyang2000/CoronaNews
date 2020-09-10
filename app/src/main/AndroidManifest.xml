@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.java.coronanews">
+    package="com.java.yueyang">
 
     <!-- 应用appId微信：wx671e6c77306f9200 -->
     <!-- 应用secret微信：b642b5569b52657159af56082f930651 -->
     <!-- 应用签名微博：11b6221bfaf2a0c58cd9aea8d2d2487b -->
     <application
-        android:name=".MainApplication"
+        android:name="com.java.yueyang.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<!--        <activity-->
+<!--            android:name="com.java.yueyang.main.SplashActivity"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/AppFullScreenTheme">-->
+
+<!--        </activity>-->
+
         <activity
-            android:name=".main.SplashActivity"
-            android:label="@string/app_name"
+            android:name="com.java.yueyang.main.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppFullScreenTheme">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".main.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -41,17 +41,17 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".news.NewsDetailActivity"
+            android:name="com.java.yueyang.news.NewsDetailActivity"
             android:label="@string/title_activity_news_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".info.InfoDetailActivity"
+            android:name="com.java.yueyang.info.InfoDetailActivity"
             android:label="@string/title_activity_info_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".scholar.ScholarDetailActivity"
+            android:name="com.java.yueyang.scholar.ScholarDetailActivity"
             android:label="@string/title_activity_scholar_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -62,6 +62,5 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 </manifest>

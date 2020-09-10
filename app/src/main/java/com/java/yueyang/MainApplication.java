@@ -1,0 +1,17 @@
+package com.java.yueyang;
+
+import android.app.Application;
+
+import com.java.yueyang.data.ImageLoader;
+import com.java.yueyang.data.Manager;
+
+public class MainApplication extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        ImageLoader.init(this);
+        // 创建数据管理
+        Manager.CreateI(this);
+    }
+}

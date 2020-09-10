@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context="com.java.coronanews.settings.SettingsFragment">
+    tools:context="com.java.yueyang.settings.SettingsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,8 +23,8 @@
             <ImageView
                 android:id="@+id/image_view"
                 android:layout_width="match_parent"
-                android:background="@drawable/setting_bg"
-                android:layout_height="256dp"
+                android:background="@drawable/bg"
+                android:layout_height="@dimen/nav_header_height"
                 android:scaleType="centerCrop" />
 
         </FrameLayout>
@@ -57,7 +57,7 @@
                     android:layout_height="36dp"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
-                    android:drawableLeft="@drawable/ic_night"
+                    android:drawableLeft="@drawable/ic_text"
                     android:drawablePadding="8dp"
                     android:text="@string/action_news"
                     android:textColor="@color/colorText"

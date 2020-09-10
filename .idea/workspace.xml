@@ -7,12 +7,119 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a127711-9eb3-4008-8671-b7bd880009f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Scholar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Scholar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarDetailActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_scholar_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_scholar_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/BasePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/BasePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/BaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/BaseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/chart/PaintChartFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/chart/PaintChartFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/COVIDInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/COVIDInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Epidemic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Epidemic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/FS.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/FS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/ImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/ImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/NewsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/NewsItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data/Scholar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Scholar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history/HistoryContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history/HistoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history/HistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/main/SplashActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarListContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scholar/ScholarListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/settings/SettingsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/settings/SettingsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-night/about_bg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-night/ic_speaker_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-night/setting_bg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/about_bg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_about.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_white_outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_night.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_speaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_speaker_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/selector_favorite.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/selector_favorite_white.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/selector_speaker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/setting_bg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/side_nav_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_news_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_news_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_scholar_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_scholar_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_result.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/history.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/key_string.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/java/coronanews/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/java/yueyang/ExampleUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +135,43 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CoronaNews" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CoronaNews" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CoronaNews" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CoronaNews" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CoronaNews" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,6 +180,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/key.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,12 +201,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ApkExportedModule" value="app" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV2" value="true" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -69,11 +222,15 @@
     <option name="MODULE_TAB" value="Properties" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/menu" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.java.coronanews" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.java.coronanews.scolar" />
@@ -81,15 +238,11 @@
       <recent name="com.java.coronanews.info" />
       <recent name="com.java.coronanews.data" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/scolar" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/history" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/java/coronanews/data" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/menu" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -148,6 +301,30 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CoronaNews:app [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signingReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CoronaNews:app [signingReport]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -167,10 +344,10 @@
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state x="-1499" y="-269" key="#PSD/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599186168774" />
-    <state x="-1560" y="-346" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599113093212">
+    <state x="-1560" y="-346" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599716690476">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state x="-1560" y="-346" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599113093212" />
+    <state x="-1560" y="-346" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599716690476" />
     <state x="-1211" y="-291" key="#com.intellij.ide.util.MemberChooser" timestamp="1599468634849">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
@@ -183,10 +360,10 @@
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state x="-1261" y="-129" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599191502195" />
-    <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599530881833">
+    <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599720473570">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599530881833" />
+    <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599720473570" />
     <state x="-1436" y="-246" key="AndroidCreateResourceDirectoryDialog" timestamp="1599200942039">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
@@ -203,42 +380,46 @@
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state width="484" height="466" key="DebuggerActiveHint/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599361521385" />
-    <state width="2006" height="313" key="GridCell.Tab.0.bottom" timestamp="1599642899442">
+    <state width="2006" height="313" key="GridCell.Tab.0.bottom" timestamp="1599720647362">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599642899442" />
-    <state width="2006" height="313" key="GridCell.Tab.0.center" timestamp="1599642899441">
+    <state width="2006" height="313" key="GridCell.Tab.0.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599720647362" />
+    <state width="2006" height="313" key="GridCell.Tab.0.center" timestamp="1599720647362">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599642899441" />
-    <state width="2006" height="313" key="GridCell.Tab.0.left" timestamp="1599642899441">
+    <state width="2006" height="313" key="GridCell.Tab.0.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599720647362" />
+    <state width="2006" height="313" key="GridCell.Tab.0.left" timestamp="1599720647360">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599642899441" />
-    <state width="2006" height="313" key="GridCell.Tab.0.right" timestamp="1599642899442">
+    <state width="2006" height="313" key="GridCell.Tab.0.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599720647360" />
+    <state width="2006" height="313" key="GridCell.Tab.0.right" timestamp="1599720647362">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599642899442" />
-    <state width="2006" height="314" key="GridCell.Tab.1.bottom" timestamp="1599552106170">
+    <state width="2006" height="313" key="GridCell.Tab.0.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599720647362" />
+    <state width="2006" height="314" key="GridCell.Tab.1.bottom" timestamp="1599718974566">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="314" key="GridCell.Tab.1.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599552106170" />
-    <state width="2006" height="314" key="GridCell.Tab.1.center" timestamp="1599552106169">
+    <state width="2006" height="314" key="GridCell.Tab.1.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599718974566" />
+    <state width="2006" height="314" key="GridCell.Tab.1.center" timestamp="1599718974566">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="314" key="GridCell.Tab.1.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599552106169" />
-    <state width="2006" height="314" key="GridCell.Tab.1.left" timestamp="1599552106163">
+    <state width="2006" height="314" key="GridCell.Tab.1.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599718974566" />
+    <state width="2006" height="314" key="GridCell.Tab.1.left" timestamp="1599718974565">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="314" key="GridCell.Tab.1.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599552106163" />
-    <state width="2006" height="314" key="GridCell.Tab.1.right" timestamp="1599552106169">
+    <state width="2006" height="314" key="GridCell.Tab.1.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599718974565" />
+    <state width="2006" height="314" key="GridCell.Tab.1.right" timestamp="1599718974566">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="314" key="GridCell.Tab.1.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599552106169" />
+    <state width="2006" height="314" key="GridCell.Tab.1.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599718974566" />
     <state width="1024" height="564" key="XDebugger.FullValuePopup" timestamp="1599476096622">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state width="1024" height="564" key="XDebugger.FullValuePopup/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599476096622" />
+    <state x="-1247" y="-223" key="chooseDestDirectoryDialog" timestamp="1599720592660">
+      <screen x="-2048" y="-572" width="2048" height="1129" />
+    </state>
+    <state x="-1247" y="-223" key="chooseDestDirectoryDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599720592660" />
     <state x="-1354" y="-175" key="com.intellij.ide.util.TipDialog" timestamp="1599639599641">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
@@ -252,14 +433,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/java/coronanews/news/NewsListPresenter.java</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListPresenter.java</url>
           <line>95</line>
           <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/java/coronanews/info/InfoDetailActivity.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -3,12 +3,11 @@
     <string name="title_activity_news_detail">NewsDetailActivity</string>
     <string name="title_activity_info_detail">InfoDetailActivity</string>
     <string name="title_activity_scholar_detail">ScholarDetailActivity</string>
-    <string name="title_activity_wxentry">WXEntryActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="search">搜索</string>
-    <string name="search_not_found">找不到相关内容</string>
+    <string name="search_not_found">无内容</string>
 
     <string name="nav_news_title">新闻</string>
     <string name="nav_history_title">历史</string>
@@ -16,29 +15,18 @@
     <string name="nav_info_title">疫情图谱</string>
     <string name="nav_setting_title">设置</string>
     <string name="nav_scholar_title">知疫学者</string>
-    <string name="action_favorite">收藏</string>
-    <string name="action_unfavorite">取消收藏</string>
-    <string name="action_speech">朗读</string>
-    <string name="action_stop_speech">停止朗读</string>
+
     <string name="action_share">分享</string>
 
     <string name="setting_view">标签</string>
     <string name="setting_other">其他</string>
-    <string name="setting_tags">首页标签</string>
-    <string name="setting_blacklist">关键词屏蔽</string>
-    <string name="about_us">关于我们</string>
     <string name="action_paper">论文标签</string>
     <string name="action_news">新闻标签</string>
     <string name="action_clean">清空历史</string>
-    <string name="action_update">检查更新</string>
     <string name="action_add_tag">添加</string>
 
-    <string name="about_addr">https://git.oschina.net/_yuguo_tianqing/Knows</string>
-    <string name="about_author">Group 39</string>
-    <string name="about_project">清青时事：\n一款由清华大学计算机系学生团队独立开发的新闻APP，旨在帮助同学了解时事，欢迎尽情玩耍(～￣▽￣)～ </string>
-    <string name="about_info">清青时事\t\t\tV1.0.0</string>
 
-    <string name="error_tips">由于惨不忍睹的网络环境\n加载失败了！\n</string>
+    <string name="error_tips">加载失败</string>
     <string name="reload_tips">点击重新加载</string>
 
     <string name="data_country">选择国家/地区</string>
