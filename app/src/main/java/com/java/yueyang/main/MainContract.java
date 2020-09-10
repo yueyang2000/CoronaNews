@@ -31,6 +31,8 @@ public interface MainContract {
         void switchToInfo();
 
         void switchToScholar();
+
+        void switchToCluster();
     }
 
     interface Presenter extends BasePresenter {

@@ -23,6 +23,10 @@
             android:id="@+id/nav_scholar"
             android:icon="@drawable/ic_news"
             android:title="@string/nav_scholar_title" />
+        <item
+            android:id="@+id/nav_cluster"
+            android:icon="@drawable/ic_news"
+            android:title="@string/nav_cluster_title" />
 
         <item
             android:id="@+id/nav_setting"

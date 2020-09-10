@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 
 import com.java.yueyang.R;
+import com.java.yueyang.cluster.ClusterFragment;
 import com.java.yueyang.settings.SettingsFragment;
 import com.java.yueyang.chart.PaintChartFragment;
 import com.java.yueyang.history.HistoryFragment;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity
     private Toolbar mToolbar;
     private NavigationView mNavigationView;
     private MainContract.Presenter mPresenter;
-    private Fragment mNews, mHistory, mChart, mSetting, mInfo, mScholar;
+    private Fragment mNews, mHistory, mChart, mSetting, mInfo, mScholar, mCluster;
     private MenuItem mSearchItem;
     private SearchView mSearchView;
     private String mKeyword = "";
@@ -216,6 +217,15 @@ public class MainActivity extends AppCompatActivity
             mScholar = ScholarFragment.newInstance();
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mScholar).commit();
+    }
+
+    @Override
+    public void switchToCluster(){
+        switchTo(R.id.nav_scholar, "新闻聚类");
+        if(mCluster == null){
+            mCluster = ClusterFragment.newInstance();
+        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mCluster).commit();
     }
 
 }

@@ -3,7 +3,7 @@
     <string name="title_activity_news_detail">NewsDetailActivity</string>
     <string name="title_activity_info_detail">InfoDetailActivity</string>
     <string name="title_activity_scholar_detail">ScholarDetailActivity</string>
-
+    <string name="title_activity_cluster_detail">ClusterDetailActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="search">搜索</string>
@@ -15,10 +15,12 @@
     <string name="nav_info_title">疫情图谱</string>
     <string name="nav_setting_title">设置</string>
     <string name="nav_scholar_title">知疫学者</string>
+    <string name="nav_cluster_title">新闻聚类</string>
 
     <string name="action_share">分享</string>
 
     <string name="setting_view">标签</string>
+    <string name="cluster_view">聚类内容</string>
     <string name="setting_other">其他</string>
     <string name="action_paper">论文标签</string>
     <string name="action_news">新闻标签</string>

@@ -57,6 +57,9 @@ public class MainPresenter implements MainContract.Presenter {
             case R.id.nav_scholar:
                 mMainView.switchToScholar();
                 break;
+            case R.id.nav_cluster:
+                mMainView.switchToCluster();
+                break;
             default:
                 break;
         }
