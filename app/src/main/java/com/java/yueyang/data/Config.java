@@ -17,10 +17,6 @@ import io.reactivex.Scheduler;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * Created by chenyu on 2017/9/12.
- * 配置相关
- */
 
 public class Config {
     public static String []categorys = {"news", "paper"};
@@ -52,83 +48,6 @@ public class Config {
         loadConfig();
     }
 
-
-    /**
-     * 所有分类
-     * @return
-     */
-    public List<Category> allCategories() {
-        List<Category> list = new ArrayList<>();
-        for(int x = 1; x < category_cnt; x ++) {
-            list.add(new Category(categorys[x], x));
-        }
-        return list;
-    }
-
-    /**
-     * 已选的分类
-     * @param withFirst 是否包含第一个分类
-     * @return
-     */
-    public List<Category> availableCategories(boolean withFirst) {
-        List<Category> list = new ArrayList<>();
-        for(int x: available_categories) {
-            list.add(new Category(categorys[x], x));
-        }
-        return list;
-    }
-
-    /**
-     * 未选的分类
-     * @return
-     */
-    public List<Category> unavailableCategories() {
-        List<Category> list = new ArrayList<>();
-        for(Integer x = 1; x < category_cnt; x ++)
-            if (!available_categories.contains(x))
-                list.add(new Category(categorys[x], x));
-        return list;
-    }
-
-    /**
-     * 添加分类
-     * @param cate 分类
-     * @return 是否成功
-     */
-    public boolean addCategory(int cate) {
-        if (!available_categories.contains(cate)) {
-            available_categories.add(cate);
-            saveConfig();
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * 删除分类
-     * @param cate 分类
-     * @return 是否成功
-     */
-    public boolean removeCategory(int cate) {
-        if (available_categories.contains(cate)) {
-            available_categories.remove(cate);
-            saveConfig();
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * 切换分类的状态，已选变成未选，未选变成已选
-     * @param cate
-     */
-    public void switchAvailable(int cate) {
-        if (available_categories.contains(cate))
-            available_categories.remove(cate);
-        else available_categories.add(cate);
-        saveConfig();
-    }
-
     private void loadConfig() {
         JSONObject obj = new JSONObject();
         try {
@@ -149,28 +68,5 @@ public class Config {
             for(int i = 1; i < category_cnt; i ++)
                 available_categories.add(i);
         }
-    }
-
-    void saveConfig() {
-
-        Single.fromCallable(new Callable<Boolean>() {
-
-            @Override
-            public Boolean call() throws Exception {
-                JSONObject obj = new JSONObject();
-                try {
-                    JSONArray available_categories_array = new JSONArray();
-                    for(int x: available_categories)
-                        available_categories_array.put(x);
-                    obj.put("available_categories", available_categories_array);
-                    OutputStreamWriter w = new OutputStreamWriter(new FileOutputStream(path));
-                    w.write(obj.toString());
-                    w.close();
-                } catch(Exception e) {
-                    e.printStackTrace();
-                }
-                return true;
-            }
-        }).subscribeOn(save_thread).subscribe();
     }
 }

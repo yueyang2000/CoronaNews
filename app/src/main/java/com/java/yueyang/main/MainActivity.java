@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void switchToChart() {
-        switchTo(R.id.nav_data, "疫情信息");
+        switchTo(R.id.nav_data, "疫情数据");
         if (mChart == null)
             mChart = PaintChartFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mChart).commit();

@@ -8,24 +8,24 @@
             android:title="@string/nav_news_title" />
         <item
             android:id="@+id/nav_history"
-            android:icon="@drawable/ic_news"
+            android:icon="@drawable/ic_history"
             android:title="@string/nav_history_title" />
         <item
             android:id="@+id/nav_data"
-            android:icon="@drawable/ic_news"
+            android:icon="@drawable/ic_data"
             android:title="@string/nav_data_title" />
         <item
             android:id="@+id/nav_info"
-            android:icon="@drawable/ic_news"
+            android:icon="@drawable/ic_info"
             android:title="@string/nav_info_title" />
 
         <item
             android:id="@+id/nav_scholar"
-            android:icon="@drawable/ic_news"
+            android:icon="@drawable/ic_scholar"
             android:title="@string/nav_scholar_title" />
         <item
             android:id="@+id/nav_cluster"
-            android:icon="@drawable/ic_news"
+            android:icon="@drawable/ic_cluster"
             android:title="@string/nav_cluster_title" />
 
         <item

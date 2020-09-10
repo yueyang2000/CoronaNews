@@ -247,14 +247,13 @@ public class PaintChartFragment extends Fragment {
             entries.add(entries.get(0));
         }
         LineDataSet dataSet = new LineDataSet(entries, "Label"); // add entries to dataset
-        dataSet.setColor(Color.parseColor("#AABCC6"));//线条颜色
-//        dataSet.setCircleColor(Color.parseColor("#7d7d7d"));//圆点颜色
+        dataSet.setColor(Color.parseColor("#006DF0"));//线条颜色
         dataSet.setDrawValues(false);                     // 设置是否显示数据点的值
         dataSet.setDrawCircleHole(false);                 // 设置数据点是空心还是实心，默认空心
-        dataSet.setCircleColor(Color.parseColor("#AABCC6"));              // 设置数据点的颜色
-        dataSet.setCircleSize(1);                         // 设置数据点的大小
-        dataSet.setHighLightColor(Color.parseColor("#AABCC6"));            // 设置点击时高亮的点的颜色
-        dataSet.setLineWidth(2f);//线条宽度
+        dataSet.setCircleColor(Color.parseColor("#006DF0"));              // 设置数据点的颜色
+        dataSet.setCircleSize(1f);                         // 设置数据点的大小
+        dataSet.setHighLightColor(Color.parseColor("#006DF0"));            // 设置点击时高亮的点的颜色
+        dataSet.setLineWidth(3f);//线条宽度
 
         //设置样式
         YAxis rightAxis = lineChart.getAxisRight();
