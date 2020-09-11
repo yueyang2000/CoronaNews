@@ -2,23 +2,14 @@ package com.java.yueyang.cluster;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.java.yueyang.data.Manager;
-import com.java.yueyang.data.NewsItem;
-import com.java.yueyang.news.NewsDetailActivity;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.reactivex.functions.Consumer;
 
 
 

@@ -1,22 +1,16 @@
 package com.java.yueyang.main;
 
 import com.java.yueyang.R;
-//import com.java.coronanews.data.Config;
-//import com.java.coronanews.data.Manager;
 
 
 public class MainPresenter implements MainContract.Presenter {
 
     private MainContract.View mMainView;
-    private boolean mRestartByMode;
     private int mCurrentNavigation = R.id.nav_news;
 
-    public MainPresenter(MainContract.View view, boolean restartByMode) {
+    public MainPresenter(MainContract.View view) {
         this.mMainView = view;
-        this.mRestartByMode = restartByMode;
         view.setPresenter(this);
-
-
         mCurrentNavigation = R.id.nav_news;
 
     }

@@ -80,15 +80,6 @@ public class ScholarListFragment extends Fragment implements ScholarListContract
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_scholar_list, container, false);
 
-//        mTextEmpty = view.findViewById(R.id.text_empty);
-//        mTextEmpty.setVisibility(mAdapter.getItemCount() == 0 ? View.VISIBLE : View.GONE);
-
-//        mSwipeRefreshWidget = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_widget);
-//        mSwipeRefreshWidget.setColorSchemeColors(getResources().getColor(colorPrimary.resourceId));
-//        mSwipeRefreshWidget.setOnRefreshListener(() -> {
-//            mSwipeRefreshWidget.setRefreshing(true);
-//            mPresenter.refreshNews();
-//        });
 
         mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView = (RecyclerView) view.findViewById(R.id.scholar_recycle_view);
@@ -96,27 +87,6 @@ public class ScholarListFragment extends Fragment implements ScholarListContract
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setAdapter(mAdapter);
-//        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-//            private int lastVisibleItem;
-//
-//            @Override
-//            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-//                super.onScrolled(recyclerView, dx, dy);
-//                lastVisibleItem = mLayoutManager.findLastVisibleItemPosition();
-//            }
-//
-//            @Override
-//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-//                super.onScrollStateChanged(recyclerView, newState);
-//                if(newState == RecyclerView.SCROLL_STATE_IDLE){
-//                    if (lastVisibleItem == mAdapter.getItemCount() - 1 &&
-//                           mAdapter.isShowFooter()  && !mPresenter.isLoading()) { //delete ISFOOTER
-//                        mPresenter.requireMoreNews();
-//                    }
-//                }
-//
-//            }
-//        });
         mPresenter.subscribe();
         return view;
     }
@@ -139,8 +109,6 @@ public class ScholarListFragment extends Fragment implements ScholarListContract
     @Override
     public void setScholar(List<Scholar> list) {
         mAdapter.setData(list);
-
-        //mTextEmpty.setVisibility(mAdapter.getItemCount() == 0 ? View.VISIBLE : View.GONE);
     }
 
 

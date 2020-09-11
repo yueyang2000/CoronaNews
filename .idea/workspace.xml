@@ -7,27 +7,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a127711-9eb3-4008-8671-b7bd880009f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_cluster.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_history.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_scholar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/BasePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/BasePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/chart/PaintChartFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/chart/PaintChartFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/cluster/ClusterAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/cluster/ClusterAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/cluster/ClusterPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/cluster/ClusterPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/API.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Epidemic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Epidemic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/FS.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/HistoryDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/ImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/ImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/data/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/history/HistoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/info/InfoPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/data_chart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/data_chart.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/main/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/scholar/ScholarListPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/settings/SettingsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/java/yueyang/settings/SettingsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/colors.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +232,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CoronaNews:app [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CoronaNews:app [signingReport]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
@@ -229,11 +251,6 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.CoronaNews:app [signingReport]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_MODE" value="false" />
@@ -283,6 +300,10 @@
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state x="-1261" y="-129" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599191502195" />
+    <state x="-1596" y="-572" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599786681042">
+      <screen x="-2048" y="-572" width="2048" height="1129" />
+    </state>
+    <state x="-1596" y="-572" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599786681042" />
     <state x="-1286" y="-254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599720473570">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
@@ -303,22 +324,22 @@
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
     <state width="484" height="466" key="DebuggerActiveHint/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599361521385" />
-    <state width="2006" height="313" key="GridCell.Tab.0.bottom" timestamp="1599747252825">
+    <state width="2006" height="313" key="GridCell.Tab.0.bottom" timestamp="1599787657510">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599747252825" />
-    <state width="2006" height="313" key="GridCell.Tab.0.center" timestamp="1599747252824">
+    <state width="2006" height="313" key="GridCell.Tab.0.bottom/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599787657510" />
+    <state width="2006" height="313" key="GridCell.Tab.0.center" timestamp="1599787657510">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599747252824" />
-    <state width="2006" height="313" key="GridCell.Tab.0.left" timestamp="1599747252824">
+    <state width="2006" height="313" key="GridCell.Tab.0.center/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599787657510" />
+    <state width="2006" height="313" key="GridCell.Tab.0.left" timestamp="1599787657509">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599747252824" />
-    <state width="2006" height="313" key="GridCell.Tab.0.right" timestamp="1599747252825">
+    <state width="2006" height="313" key="GridCell.Tab.0.left/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599787657509" />
+    <state width="2006" height="313" key="GridCell.Tab.0.right" timestamp="1599787657510">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
-    <state width="2006" height="313" key="GridCell.Tab.0.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599747252825" />
+    <state width="2006" height="313" key="GridCell.Tab.0.right/0.23.1440.877/-2048.-572.2048.1129@-2048.-572.2048.1129" timestamp="1599787657510" />
     <state width="2006" height="314" key="GridCell.Tab.1.bottom" timestamp="1599743601062">
       <screen x="-2048" y="-572" width="2048" height="1129" />
     </state>
@@ -357,7 +378,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/java/yueyang/news/NewsListPresenter.java</url>
-          <line>95</line>
+          <line>94</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>

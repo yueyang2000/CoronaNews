@@ -33,21 +33,13 @@ import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
 
 public class InfoDetailActivity extends AppCompatActivity {
-
     private String entity;;
     private COVIDInfo mInfo;
-
-    // private NewsDetailContract.Presenter mPresenter;
-
-
     private ProgressBar mProgressBar;
     private View content;
     private ImageView mImage;
     private NestedScrollView mScrollView;
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
-    // private View mBottomView, mFavoriteBtn, mSpeechBtn, mShareBtn;
-
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

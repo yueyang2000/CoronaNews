@@ -50,13 +50,7 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
         return mKeyword;
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param category 新闻分类 code
-     * @return A new instance of fragment NewsListFragment.
-     */
+
     public static NewsListFragment newInstance(int category, String keyword) {
         Bundle args = new Bundle();
         NewsListFragment fragment = new NewsListFragment();
@@ -81,11 +75,6 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
                 this.mLastClickPosition = position;
             } else
                 this.mLastClickPosition = -1;
-//            View transitionView = itemView.findViewById(R.id.image_view);
-//
-//            ActivityOptionsCompat options =
-//                    ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
-//                            transitionView, getString(R.string.transition_news_img));
 
             this.mPresenter.openNewsDetailUI(news, new Bundle());
         });
@@ -97,7 +86,6 @@ public class NewsListFragment extends Fragment implements NewsListContract.View 
     public void onResume() {
         super.onResume();
         if (mLastClickPosition >= 0 && mPresenter != null)
-            //mAdapter.getNews(mLastClickPosition).has_read = true;
             mPresenter.fetchNewsRead(mLastClickPosition);
     }
 

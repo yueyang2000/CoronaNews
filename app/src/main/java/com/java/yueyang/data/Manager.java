@@ -20,20 +20,11 @@ import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * Created by chenyu on 2017/9/8.
- * 所有数据相关操作的管理员，单例
- * 已设置subscribeOn(Schedulers.io())和observeOn(AndroidSchedulers.mainThread())
- * 网络优先
- */
+
 
 public class Manager {
     public static Manager I = null;
 
-    /**
-     * 创建单例
-     * @param context 上下文
-     */
     public static synchronized void CreateI(Context context) {
         try {
             I = new Manager(context);
@@ -43,30 +34,14 @@ public class Manager {
         }
     }
 
-    private FS fs;
+    private HistoryDB fs;
     private Config config;
-    private FlowableTransformer<NewsItem, NewsItem> liftAllSimple;
-    private FlowableTransformer<NewsItem, NewsItem> liftAllDetail;
 
     private Manager(final Context context) throws IOException {
-        this.fs = new FS(context);
+        this.fs = new HistoryDB(context);
         this.config = new Config(context);
     }
 
-    public Single<Boolean> waitForInit() {
-
-        return Single.fromCallable(new Callable<Boolean>() {
-            @Override
-            public Boolean call() throws Exception {
-                fs.waitForInit();
-                return true;
-            }
-        }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
-    }
-
-    public Config getConfig() {
-        return config;
-    }
 
     public Single<List<COVIDInfo>> fetchInfo(String keyword){
         return Flowable.fromCallable(new Callable<List<COVIDInfo>>() {
@@ -123,7 +98,7 @@ public class Manager {
     }
 
 
-
+    //获取疫情数据
     public Single<JSONObject> fetchData() {
         return Single.fromCallable(new Callable<JSONObject>() {
             @Override
@@ -149,12 +124,6 @@ public class Manager {
     }
 
 
-
-    /**
-     *
-     * @return 收藏列表
-     */
-
     public Single<List<NewsItem>> history() {
         return Flowable.fromCallable(new Callable<List<NewsItem>>() {
             @Override
@@ -168,28 +137,6 @@ public class Manager {
             }
         }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
-
-
-//    public Single<List<COVIDInfo>> fetchRelatedInfo(List<String>name)
-//    {
-//        return Flowable.fromCallable(new Callable<List<COVIDInfo>>() {
-//            @Override
-//            public List<COVIDInfo> call() throws Exception{
-//                try{
-//                    return API.GetRelatedInfo(name);
-//                }
-//                catch(Exception e){
-//                    return new ArrayList<COVIDInfo>();
-//                }
-//            }
-//        }).flatMap(new Function<List<COVIDInfo>, Publisher<COVIDInfo>>() {
-//            @Override
-//            public Publisher<COVIDInfo> apply(@NonNull List<COVIDInfo> infos) throws Exception {
-//                return Flowable.fromIterable(infos);
-//            }
-//        }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
-//    }
-
 
     public Single<List<Scholar>> getScholar(int flag){
         return Flowable.fromCallable(new Callable<List<Scholar>>() {
@@ -220,33 +167,17 @@ public class Manager {
         }).toList().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
 
-    /**
-     * 清空数据库缓存
-     * @return 是否成功
-     */
     public Single<Boolean> clean() {
         return Single.fromCallable(new Callable<Boolean>() {
             @Override
             public Boolean call() throws Exception {
-                fs.dropTables();
-                fs.createTables();
+                fs.dropTable();
+                fs.createTable();
                 return true;
             }
         }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
 
-    /**
-     * 分享
-     * @param activity 调用者
-     * @param title 标题
-     * @param text 文本内容
-     * @param url 分享链接
-     * @param imgUrl 图片链接
-     */
-
-    public static void shareNews(Activity activity, String title, String text, String url, String imgUrl) {
-        API.ShareNews(activity, title, text, url, imgUrl);
-    }
 
     // ========================================================
     private class FetchRead<T extends NewsItem> implements Function<T, T> {

@@ -10,9 +10,6 @@ import java.util.List;
 
 import io.reactivex.functions.Consumer;
 
-/**
- * Created by equation on 9/12/17.
- */
 
 public class InfoPresenter implements InfoContract.Presenter {
 

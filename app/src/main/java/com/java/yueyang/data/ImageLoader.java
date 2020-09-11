@@ -14,8 +14,8 @@ public class ImageLoader {
         mImageLoader.init(ImageLoaderConfiguration.createDefault(context));
         mDisplayImageOptions = new DisplayImageOptions.Builder()
                 .showImageOnLoading(null)
-                .showImageForEmptyUri(R.mipmap.ic_launcher)
-                .showImageOnFail(R.mipmap.ic_launcher)
+                .showImageForEmptyUri(R.drawable.bg)
+                .showImageOnFail(R.drawable.bg)
                 .resetViewBeforeLoading(true)
                 .cacheOnDisk(true)
                 .build();
@@ -23,14 +23,6 @@ public class ImageLoader {
 
     public static void displayImage(String imageUrl, ImageView imageView) {
         mImageLoader.displayImage(imageUrl, imageView, mDisplayImageOptions);
-    }
-
-    public static void clearDiskCache() {
-        mImageLoader.clearDiskCache();
-    }
-
-    public static void cancelDisplayTask(ImageView v) {
-        mImageLoader.cancelDisplayTask(v);
     }
 
     private static com.nostra13.universalimageloader.core.ImageLoader

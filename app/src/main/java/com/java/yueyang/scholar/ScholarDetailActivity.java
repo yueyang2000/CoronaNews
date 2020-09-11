@@ -34,7 +34,6 @@ public class ScholarDetailActivity extends AppCompatActivity {
     private Scholar mScholar;
 
 
-    // private NewsDetailContract.Presenter mPresenter;
     private NewsItem mNews;
     private boolean mError;
 
@@ -43,12 +42,7 @@ public class ScholarDetailActivity extends AppCompatActivity {
     private FloatingActionButton mFab;
     private NestedScrollView mScrollView;
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
-
-
-    private void onShare() {
-        Manager.I.shareNews(this, mNews.title,
-                    "", "www.example.com", "");
-    }
+    
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

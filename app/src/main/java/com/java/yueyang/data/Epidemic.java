@@ -32,7 +32,6 @@ public class Epidemic {
         return answer;
     }
     public static String getDate(String country, String provience, int type){
-        String begin;
         String key = (provience=="all")? country: country+"|"+provience;
         try{
             JSONObject j = data.getJSONObject(key);

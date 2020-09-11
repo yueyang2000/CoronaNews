@@ -11,7 +11,6 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         ImageLoader.init(this);
-        // 创建数据管理
         Manager.CreateI(this);
     }
 }

@@ -68,25 +68,7 @@ class API {
         return result;
     }
 
-//    public static List<COVIDInfo> GetRelatedInfo(List<String> name)  throws IOException, JSONException{
-//        List<COVIDInfo> result = new ArrayList<>();
-//        for(int i = 0; i<name.size(); i++)
-//        {
-//            String entity = name.get(i);
-//            String URL_String = new String(String.format("https://innovaapi.aminer.cn/covid/api/v1/pneumonia/entityquery?entity=%s", entity));
-//            String body = GetBodyFromURL(URL_String,false);
-//            JSONObject allData = new JSONObject(body);
-//            JSONArray list = allData.getJSONArray("data");
-//            JSONObject json_news = list.getJSONObject(0);
-//            result.add(COVIDInfo.parseJSON(json_news));
-//        }
-//        return result;
-//    }
 
-    /**
-     * @param url 网页地址
-     * @return 网页内容
-     */
     static String GetBodyFromURL(String url, boolean getdata) throws IOException {
         URL cs = new URL(url);
         BufferedReader in = null;
@@ -108,32 +90,7 @@ class API {
         return body;
     }
 
-    /**
-     * 测试是否可以访问
-     * @param url 地址
-     * @return 网络不可用是返回null
-     */
-    static Boolean TestConnection(String url) {
-        try {
-            URL cs = new URL(url);
-            URLConnection conn = cs.openConnection();
-            conn.connect();
 
-            int code = 0;
-            if (cs.getProtocol().toLowerCase().equals("http")) {
-                code = ((HttpURLConnection)conn).getResponseCode();
-            } else if (cs.getProtocol().toLowerCase().equals("https")) {
-                code = ((HttpsURLConnection)conn).getResponseCode();
-            } else {
-                return null;
-            }
-
-            return code == 200 && !conn.getURL().toString().endsWith("error.html");
-        } catch(Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 
     public static List<NewsItem> GetNews(final int pageNo, final int pageSize, final int categiory) throws IOException, JSONException {
         List<String> available = Config.availableList();
@@ -152,9 +109,7 @@ class API {
         }
         return result;
     }
-    /**
-     * 获得疫情数据内容
-     */
+
     public static JSONObject GetEpidemicData() throws IOException, JSONException{
         String URL_String = "https://covid-dashboard.aminer.cn/api/dist/epidemic.json";
         String body = GetBodyFromURL(URL_String, true);
@@ -164,21 +119,5 @@ class API {
             return new JSONObject();
         }
         return new JSONObject(body); //直接返回json文件，存储在config里
-    }
-
-    /**
-     * 分享
-     * @param activity 调用者
-     * @param title 标题
-     * @param text 文本内容
-     * @param url 分享链接
-     * @param imgUrl 图片链接
-     */
-    public static void ShareNews(Activity activity, String title, String text, String url, String imgUrl)
-    {
-        ShareEntity testBean = new ShareEntity(title, text);
-        testBean.setUrl(url);
-        testBean.setImgUrl(imgUrl);
-        ShareUtil.showShareDialog(activity, testBean, ShareConstant.REQUEST_CODE);
     }
 }

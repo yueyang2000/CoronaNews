@@ -27,14 +27,9 @@ import com.java.yueyang.news.NewsFragment;
 import com.java.yueyang.info.InfoFragment;
 import com.java.yueyang.scholar.ScholarFragment;
 
-/**
- * Created by equation on 9/7/17.
- */
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, MainContract.View {
 
-    private static final String RESTART_BY_MODE = "RESTART_BY_MODE";
 
     private Toolbar mToolbar;
     private NavigationView mNavigationView;
@@ -47,7 +42,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPresenter = new MainPresenter(this, getIntent().getBooleanExtra(RESTART_BY_MODE, false));
+        mPresenter = new MainPresenter(this);
 
         setContentView(R.layout.activity_main);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -167,8 +162,6 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
-
     @Override
     public void switchToNews() {
         switchTo(R.id.nav_news, "新闻");
@@ -193,7 +186,7 @@ public class MainActivity extends AppCompatActivity
             mChart = PaintChartFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, mChart).commit();
     }
-
+    @Override
     public void switchToHistory() {
         switchTo(R.id.nav_history, "历史");
         if (mHistory == null)

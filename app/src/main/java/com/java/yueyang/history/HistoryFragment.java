@@ -19,13 +19,7 @@ import com.java.yueyang.news.NewsAdapter;
 
 import java.util.List;
 
-/**
- * 收藏列表
- * Created by equation on 9/12/17.
- * A simple {@link Fragment} subclass.
- * Use the {@link HistoryFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 
 public class HistoryFragment extends Fragment implements HistoryContract.View {
 
@@ -39,13 +33,6 @@ public class HistoryFragment extends Fragment implements HistoryContract.View {
     public HistoryFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment NewsListFragment.
-     */
     public static HistoryFragment newInstance() {
         HistoryFragment fragment = new HistoryFragment();
         return fragment;
@@ -105,9 +92,4 @@ public class HistoryFragment extends Fragment implements HistoryContract.View {
     public void start(Intent intent, Bundle options) {
         startActivityForResult(intent, 0, options);
     }
-
-    public void clean_history(){
-        Toast.makeText(this.getActivity(), "清除历史", Toast.LENGTH_SHORT);
-    }
-
 }

@@ -18,9 +18,6 @@ import com.java.yueyang.data.Manager;
 
 import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
-/**
- * Created by 岳 on 2017/9/12.
- */
 
 public class SettingsFragment extends Fragment {
     private Switch mNewsSwitch;

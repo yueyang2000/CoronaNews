@@ -17,13 +17,6 @@ import com.java.yueyang.data.COVIDInfo;
 
 import java.util.List;
 
-/**
- * 收藏列表
- * Created by equation on 9/12/17.
- * A simple {@link Fragment} subclass.
- * Use the {@link InfoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 
 public class InfoFragment extends Fragment implements InfoContract.View {
 
@@ -37,13 +30,6 @@ public class InfoFragment extends Fragment implements InfoContract.View {
     public InfoFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment NewsListFragment.
-     */
     public static InfoFragment newInstance() {
         InfoFragment fragment = new InfoFragment();
         return fragment;

@@ -18,7 +18,6 @@ import java.util.List;
 public class ClusterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private static final int TYPE_ITEM = 0;
-    private static final int TYPE_HEADER = 1;
     private static final int TYPE_FOOTER = 2;
 
     private Context mContext;

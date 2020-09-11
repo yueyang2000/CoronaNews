@@ -36,12 +36,7 @@ public class NewsFragment extends Fragment {
         mPagerAdapter.notifyDataSetChanged();
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment NewsListFragment.
-     */
+
     public static NewsFragment newInstance() {
         NewsFragment fragment = new NewsFragment();
         return fragment;

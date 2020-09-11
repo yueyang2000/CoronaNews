@@ -36,7 +36,6 @@ public class NewsDetailActivity extends AppCompatActivity {
     private String news_type;
 
 
-    // private NewsDetailContract.Presenter mPresenter;
     private boolean mError;
 
     private TextView mTag, mDetail, mContent;
@@ -44,13 +43,6 @@ public class NewsDetailActivity extends AppCompatActivity {
     private FloatingActionButton mFab;
     private NestedScrollView mScrollView;
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
-    //private View mBottomView, mFavoriteBtn, mSpeechBtn, mShareBtn;
-
-//
-//    private void onShare() {
-//        Manager.I.shareNews(this, mNews.title,
-//                "", "www.example.com", "");
-//    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

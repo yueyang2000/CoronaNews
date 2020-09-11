@@ -8,7 +8,6 @@ import com.java.yueyang.data.Manager;
 import com.java.yueyang.data.NewsItem;
 import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
-// import com.java.coronanews.news.newsdetail.NewsDetailActivity;
 
 
 public class NewsListPresenter implements NewsListContract.Presenter {

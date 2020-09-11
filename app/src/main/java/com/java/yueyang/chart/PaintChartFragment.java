@@ -48,13 +48,6 @@ import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
 
 
-/**
- * 新闻主页面
- * Created by equation on 9/8/17.
- * A simple {@link Fragment} subclass.
- * create an instance of this fragment.
- */
-
 public class PaintChartFragment extends Fragment {
     private Spinner mProvinceSpinner;
     private Spinner mCountrySpinner;
@@ -67,7 +60,6 @@ public class PaintChartFragment extends Fragment {
     private int type = -1;
     private View view;
     private LineChart lineChart;
-    private TextView graphTextView;
 
 
 

@@ -17,13 +17,6 @@ import com.java.yueyang.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 新闻主页面
- * Created by equation on 9/8/17.
- * A simple {@link Fragment} subclass.
- * Use the {@link ScholarFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 
 public class ScholarFragment extends Fragment {
 
@@ -46,7 +39,6 @@ public class ScholarFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mCategories.clear();
-        //mCategories = Manager.I.getConfig().availableCategories(true);
         mCategories.add("知疫学者");
         mCategories.add("追忆学者");
         mPagerAdapter = new MyPagerAdapter(getChildFragmentManager(), mCategories);

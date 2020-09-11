@@ -108,16 +108,10 @@ public class ScholarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return mData.size() + (mIsShowFooter ? 1 : 0);
     }
 
-    /**
-     * 新闻点击 Listener
-     */
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
     }
 
-    /**
-     * 新闻单元格
-     */
     public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         View mView;
@@ -144,9 +138,6 @@ public class ScholarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
     }
 
-    /**
-     * 列表底部
-     */
     public class FooterViewHolder extends RecyclerView.ViewHolder {
 
         public FooterViewHolder(View view) {

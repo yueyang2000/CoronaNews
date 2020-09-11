@@ -9,8 +9,6 @@ import com.java.yueyang.data.Scholar;
 import java.util.List;
 
 import io.reactivex.functions.Consumer;
-// import com.java.coronanews.news.newsdetail.NewsDetailActivity;
-
 
 public class ScholarListPresenter implements ScholarListContract.Presenter {
 
@@ -18,8 +16,6 @@ public class ScholarListPresenter implements ScholarListContract.Presenter {
 
     private ScholarListFragment mView;
     private int mCategory;
-    private String mKeyword;
-    private int mPageNo = 1;
     private boolean mLoading = false;
     private long mLastFetchStart;
 
